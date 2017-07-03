@@ -1,0 +1,130 @@
+.slider-wrap
+  position: relative
+  z-index: 1
+.slide-img
+  position: relative
+  @media #{$large-up}
+    display: inline-block
+    width: 70%
+.slide-description
+  background: $red
+  position: relative
+  padding-top: 200px
+  @media #{$large-up}
+    position: absolute
+    right: 0
+    width: 30%
+    top: -30px
+    bottom: -30px
+    padding-top: 0
+  .inner-text
+    padding: 20px
+    position: absolute
+    opacity: 0
+    top: 0
+    +transition(opacity .5s)
+    &.visible
+      opacity: 1
+    @media #{$large-up}
+      padding: 30px
+  .large-title
+    +padding-top(0px,20px,80px,100px)
+    +padding-bottom(20px,30px,80px,100px)
+  .game
+    font-size: 14px
+    color: $grey900
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 5px
+    span
+      color: white
+      font-weight: normal
+      &:after
+        content: '\003A'
+  .slide-btns
+    border-top: 1px solid rgba($grey900, 0.4)
+    @media #{$large-up}
+      position: absolute
+      width: 100%
+      bottom: 0
+      left: 0
+    .floated
+      position: relative
+      width: 50%
+      cursor: pointer
+      &:before
+        content: ''
+        display: block
+        padding-top: 50%
+        @media #{$large-up}
+          padding-top: 100%
+      .hover-text
+        position: absolute
+        +xy-align
+        opacity: 0
+        +transition(opacity .5s)
+      svg
+        width: 30px
+        height: 30px
+        +centered-inside
+        +transition(.5s)
+      &:hover
+        .hover-text
+          opacity: 1
+      &:nth-child(1)
+        border-right: 1px solid rgba($grey900, 0.4)
+        &:hover
+          svg
+            +translate(-50px,0)
+      &:nth-child(2)
+        &:hover
+          svg
+            +translate(50px,0)
+
+.virtual-reality-wrap
+  position: relative
+  z-index: 2
+
+  .large-title
+    margin-top: 30px
+    margin-bottom: 30px
+    &:after
+      content: ''
+      display: block
+      width: 50px
+      height: 3px
+      background: $yellow
+      margin-top: 25px
+    @media #{$medium-up}
+      margin-top: 100px
+    @media #{$xxlarge-up}
+      margin-top: 140px
+  .smaller
+    color: rgba(white,0.5)
+    margin-bottom: 20px
+    span
+      color: white
+      &:before
+        content: '\00A0'
+  .img
+    +img-container(100%)
+    &:before
+      content: ''
+      display: block
+      width: 30%
+      height: 50%
+      position: absolute
+      left: 20px
+      bottom: -30px
+      background: $yellow
+      box-shadow: 0 0 100px 0 rgba($yellow,1)
+      z-index: -1
+    @media #{$medium-up}
+      padding-bottom: 150%
+      margin-top: 30px
+      &:before
+        width: 20%
+        left: -10%
+        bottom: -10%
+    @media #{$large-up}
+      margin-top: -100px

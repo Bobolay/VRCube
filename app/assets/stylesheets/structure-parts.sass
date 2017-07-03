@@ -1,0 +1,137 @@
+.row.columns-left
+  .columns
+    float: left !important
+
+.dib
+  display: inline-block
+  vertical-align: middle
+  line-height: 1
+
+.clearfix
+  position: relative
+  +clearfix
+  .floated
+    float: left
+  .floated-right
+    float: right
+
+.float-right
+  @media #{$medium-up}
+    float: right !important
+.float-left
+  @media #{$medium-up}
+    float: left !important
+
+.mobile
+  @media #{$medium-up}
+    display: none
+.desktop
+  @media #{$small-only}
+    display: none
+
+.img-container
+  position: relative
+  width: 100%
+  height: 0
+  padding-bottom: 56%
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  overflow: hidden
+
+.img-bg
+  position: absolute
+  +fullsize
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  +transition(1s)
+
+.lightened
+  +grayscale
+  background-color: rgba(255,255,255,0.75)
+  background-blend-mode: lighten
+
+.darken
+  +grayscale
+  background-color: rgba(0,0,0,0.25)
+  background-blend-mode: darken
+
+.corner-btn
+  position: relative
+  width: 54px
+  height: 54px
+  cursor: pointer
+  &:before, &:after
+    content: ''
+    position: absolute
+    top: 0
+    width: 16px
+    height: 100%
+    background-repeat: no-repeat
+  p
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 700
+    line-height: 54px
+    text-align: center
+  svg
+    +centered-inside
+    width: 24px
+    height: 24px
+  &:before
+    left: 0
+    background-image: url(#{asset_path('icons/left-line-button.svg')})
+  &:after
+    right: 0
+    background-image: url(#{asset_path('icons/right-line-button.svg')})
+
+.section-title
+  position: relative
+  font-family: 'Open Sans', sans-serif
+  +font-size(18px,36px,46px)
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 10px
+  margin-bottom: 20px
+  span
+    color: $dark
+    &:before
+      // content: '\00A0'
+  &:before, &:after
+    display: block
+    content: attr(data-text)
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    opacity: .8
+  &:before
+    color: $cyan
+    z-index: -1
+    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite
+  &:after
+    color: $red
+    z-index: -2
+    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+
+.section-subtitle
+  font-weight: 700
+  opacity: 0.5
+  span
+    color: $red
+    &:before, &:after
+      content: '\00A0'
+
+.large-title
+  font-family: 'Open Sans', sans-serif
+  +font-size(16px,18px,24px)
+  text-transform: uppercase
+  letter-spacing: 5px
+  font-weight: 700
+  line-height: 1.5
+
+.section-indent
+  +padding-top(80px,100px,120px,140px)
+  +padding-bottom(60px,80px,100px,120px)

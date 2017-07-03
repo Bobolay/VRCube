@@ -1,0 +1,169 @@
+.banner-wrap
+  position: relative
+  height: 100vh
+  overflow: hidden
+
+  .main-photo
+    position: relative
+    height: 80vh
+    background: $red
+    margin-top: 100px
+    z-index: 1
+    background-size: cover
+    background-position: center
+    box-shadow: 0 20px 100px 0 rgba(0,0,0,0.7)
+    display: none
+    @media #{$large-up}
+      display: block
+
+  .banner-text
+    +y-align
+    text-align: center
+    width: calc(100% - 2*0.625em)
+    .small
+      text-transform: uppercase
+      letter-spacing: 5px
+      @media #{$medium-only}
+        font-size: 16px
+    .header-holder
+      display: inline-block
+    h1
+      position: relative
+      font-family: 'Open Sans', sans-serif
+      font-size: 100px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 10px
+      margin: 50px 0 20px
+      span
+        color: $dark
+      &:before, &:after
+        display: block
+        content: 'VRCUBE'
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        opacity: .8
+      &:before
+        color: $cyan
+        z-index: -1
+        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite
+      &:after
+        color: $red
+        z-index: -2
+        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+      @media #{$small-only}
+        font-size: 50px
+        margin: 10px 0
+      @media #{$xxlarge-up}
+        font-size: 125px
+    @media #{$large-up}
+      text-align: left
+      width: initial
+    .subheader
+      text-transform: uppercase
+      letter-spacing: 5px
+      @media #{$medium-only}
+        font-size: 20px
+      @media #{$large-up}
+        text-align: right
+    .order-btn
+      position: relative
+      font-weight: 700
+      text-transform: uppercase
+      background: $red
+      margin-top: 100px
+      padding: 30px 40px
+      letter-spacing: 5px
+      box-shadow: 0 0 100px 0 rgba($red,1)
+      cursor: pointer
+      svg
+        fill: white
+        width: 16px
+        height: 16px
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: -2020px
+        width: 2000px
+        height: 100%
+        background: $cyan
+        box-shadow: 0 0 100px rgba($cyan,0.7)
+        z-index: -1
+        +transition(1s)
+        display: none
+      @media #{$small-only}
+        padding: 20px 30px
+        margin-top: 50px
+      @media #{$medium-up}
+        display: inline-block
+        margin-right: 30px
+      @media #{$large-up}
+        &:before
+          display: block
+
+    .contact-phone
+      display: inline-block
+      letter-spacing: 5px
+      span
+        color: $red
+        margin-right: 5px
+        &:before
+          content: '\005B'
+        &:after
+          content: '\005D'
+      @media #{$small-only}
+        margin-top: 10px
+
+  .socials
+    position: absolute
+    bottom: 20px
+    right: 20px
+    li
+      padding: 10px
+      width: 34px
+      text-align: center
+      display: inline-block
+      @media #{$medium-only}
+        padding: 20px
+        width: 64px
+    @media #{$large-up}
+      right: 30px
+      bottom: 240px
+      li
+        display: block
+
+  .read-more
+    position: absolute
+    bottom: 20px
+    left: 20px
+    cursor: pointer
+    p
+      font-size: 11px
+      opacity: 0.5
+      text-transform: uppercase
+      letter-spacing: 5px
+      position: absolute
+      transform: rotate(90deg) translate(-100px,0%)
+      width: 47px
+      +transition(0.25s)
+      @media #{$small-only}
+        display: none
+    svg
+      width: 50px
+      height: 50px
+      +transition(0.25s)
+    &:hover
+      p
+        color: $red
+        letter-spacing: 6px
+      svg
+        +translate(0,5px)
+    @media #{$medium-up}
+      padding-top: 130px
+    @media #{$large-up}
+      left: initial
+      right: 20px

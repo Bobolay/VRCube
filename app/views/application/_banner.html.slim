@@ -1,0 +1,34 @@
+.banner-wrap
+
+  .row
+    .columns.large-5
+      .main-photo style="background-image: url(#{asset_path('photo/banner-photo.jpg')})"
+    .columns.large-6
+      .banner-text
+        p.small
+          | Перший у Львові
+        .header-holder
+          h1
+            | vr
+            span cube
+          p.subheader
+            | майбутнє вже поруч
+
+        .contact-us-field
+          .order-btn
+            | бронювання
+            = inline_svg "icons/calendar"
+          a.contact-phone
+            span 097
+            | 456-21-45
+
+  ul.socials
+    li
+      = inline_svg "icons/social-fb.svg"
+    li
+      = inline_svg "icons/social-instagram.svg"
+
+  .read-more
+    p
+      | детальніше
+    = inline_svg "icons/arrow-more-main-banner.svg"

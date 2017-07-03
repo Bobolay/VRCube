@@ -1,0 +1,71 @@
+= render "banner"
+
+.row.section-indent
+  .columns
+    p.section-title data-text="технологія vr"
+      | технологія
+      span &nbsp;vr
+    p.section-subtitle
+      | Нова технологія безконтактної інформаційної взаємодії
+      
+.slider-wrap
+  .slide-img
+    ul.games-slider
+      li
+        .img-container style="background-image: url(#{asset_path('photo/slider-1.jpg')})"
+      li
+        .img-container style="background-image: url(#{asset_path('photo/slider-2.jpg')})"
+      li
+        .img-container style="background-image: url(#{asset_path('photo/slider-3.jpg')})"
+
+  .slide-description
+
+    .inner-text
+      p.large-title Ви коли-небудь мріяли ступити крок на краєчок Великого Каньйону в Арізоні?
+      p.game
+        span гра
+        | inmaps
+    .inner-text
+      p.large-title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quasi labore officia.
+      p.game
+        span гра
+        | cs 1.6
+    .inner-text
+      p.large-title Або ж забігти на обідню перерву і прокататися на Американських гірках щоб аж дух захопило?
+      p.game
+        span гра
+        | zero hour
+
+    .slide-btns.clearfix
+      .slider-prev.floated
+        .hover-text
+          | Cюди
+        = inline_svg ('icons/arrow-slider-left')
+      .slider-next.floated
+        .hover-text
+          | Туди
+        = inline_svg ('icons/arrow-slider-right')
+
+.virtual-reality-wrap
+
+  .row
+    .columns.medium-6.float-right
+      p.large-title
+        | Сьогодні це можливо за допомогою технологій віртуальної реальності
+      p.smaller
+        | Віртуальна реальність – це технологія з допомогою якої ви зможете поринути у світ, де
+        span немає меж реальності.
+    .columns.medium-5.medium-push-1.large-4.float-left
+      .img style="background-image: url(#{asset_path('photo/slider-1.jpg')})"
+
+.row.section-indent
+  .columns
+    p.section-title.centered data-text="vrcube"
+      | vr
+      span cube
+  .columns.medium-6
+    p.section-subtitle
+      |&mdash; справжні
+      span VR
+      |технології та інфраструктура, створена для  задоволення і розваг де кожний знайде щось
+      span для себе. 
