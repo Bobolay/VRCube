@@ -52,7 +52,7 @@
     .columns.medium-6.float-right
       p.large-title
         | Сьогодні це можливо за допомогою технологій віртуальної реальності
-      p.smaller
+      p.regular
         | Віртуальна реальність – це технологія з допомогою якої ви зможете поринути у світ, де
         span немає меж реальності.
     .columns.medium-5.medium-push-1.large-4.float-left
@@ -60,7 +60,7 @@
 
 .row.section-indent
   .columns
-    p.section-title.centered data-text="vrcube"
+    p.section-title.larger.centered data-text="vrcube"
       | vr
       span cube
   .columns.medium-6
@@ -68,4 +68,13 @@
       |&mdash; справжні
       span VR
       |технології та інфраструктура, створена для  задоволення і розваг де кожний знайде щось
-      span для себе. 
+      span для себе.
+
+.accordion-wrap
+  .acordion-container
+    .inner.active
+      .img style="background-image: url(#{asset_path('photo/slider-about-1.jpg')})"
+    .inner
+      .img style="background-image: url(#{asset_path('photo/slider-about-2.jpg')})"
+    .inner
+      .img style="background-image: url(#{asset_path('photo/slider-about-3.jpg')})"

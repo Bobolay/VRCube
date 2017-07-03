@@ -98,6 +98,8 @@
     color: $dark
     &:before
       // content: '\00A0'
+  &.larger
+    +font-size(21px,48px,72px)
   &:before, &:after
     display: block
     content: attr(data-text)
@@ -117,8 +119,8 @@
     animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
 
 .section-subtitle
-  font-weight: 700
-  opacity: 0.5
+  color: rgba(white,0.5)
+  letter-spacing: 2px
   span
     color: $red
     &:before, &:after

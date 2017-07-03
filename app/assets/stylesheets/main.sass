@@ -99,9 +99,10 @@
       margin-top: 100px
     @media #{$xxlarge-up}
       margin-top: 140px
-  .smaller
+  .regular
     color: rgba(white,0.5)
     margin-bottom: 20px
+    letter-spacing: 2px
     span
       color: white
       &:before
@@ -128,3 +129,46 @@
         bottom: -10%
     @media #{$large-up}
       margin-top: -100px
+
+.accordion-wrap
+  position: relative
+  padding-top: 40%
+  .acordion-container
+    +fullsize
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: stretch
+  .inner
+    width: 100px
+    +transition(width .5s ceaser($easeOutCubic))
+    cursor: pointer
+    &:first-child
+      background: $cyan
+    &:nth-child(2)
+      background: $red
+    &:last-child
+      background: $yellow
+    &.active
+      width: calc(100% - 200px)
+      .img
+        opacity: 1
+    &:not(.active)
+      z-index: 2
+  .img
+    position: absolute
+    top: 0
+    right: 0
+    width: 50%
+    opacity: 0
+    pointer-events: none
+    background-size: cover
+    +translate(-100px,0)
+    +transition(opacity .2s)
+    &:before
+      content: ''
+      display: block
+      padding-top: 80%
+
