@@ -60,9 +60,12 @@
 
 .row.section-indent
   .columns
-    p.section-title.larger.centered data-text="vrcube"
-      | vr
-      span cube
+    .section-holder
+      p.section-title.larger.centered data-text="vrcube"
+        | vr
+        span cube
+      .corner-btn.square = inline_svg "icons/play.svg"
+
   .columns.medium-6
     p.section-subtitle
       |&mdash; справжні
@@ -102,3 +105,89 @@
           p
             | бронювання
             span = inline_svg "icons/calendar.svg"
+
+.games-wrap.section-indent
+  .row.columns-left
+    .columns.medium-4
+      .size-adjuster.with-title
+        .inner-text
+          p.section-title.larger.centered data-text="vr ігри"
+            | vr
+            span &nbsp;ігри
+    .columns.medium-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title raw data
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/mKzLoZFz8PE" frameborder="0" allowfullscreen=""
+    .columns.medium-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title fantastic contraption
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+    .columns.medium-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title raw data
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/mKzLoZFz8PE" frameborder="0" allowfullscreen=""
+    .columns.medium-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title fantastic contraption
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+
+.contact-wrap
+  .img-bg style="background-image: url(#{asset_path('photo/background-photo-bottom.jpg')})"
+  .row
+    .columns.large-10.large-centered
+      .section-holder
+        p.contact-subtitle
+          | Не гайте часу, завітайте у
+        p.section-title.larger data-text="vrcube"
+          | vr
+          span cube
+        p.address
+          = inline_svg "icons/location.svg"
+          | вул. Княгині Ольги 114
+          span будівля “Аквапарку”
+
+      .row
+        .columns.large-8
+          form.contact-form
+            p.smaller
+              | Внесіть дані і ми вам перетелефонуємо
+              span = inline_svg "icons/mail.svg"
+            .input-field
+              input placeholder="Ваше ім'я" name="name"
+            .input-field
+              input placeholder="Ваше ім'я" name="name"
+            .corner-btn
+              p
+                | замовити
+            p.smaller
+              | Або бронюйте за телефоном
+              span = inline_svg "icons/phone.svg"
+            a.large 097 456-21-45

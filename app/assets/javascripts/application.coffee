@@ -24,3 +24,4 @@
 #= require header
 #= require menu
 #= require accordion
+#= require play-video

@@ -96,6 +96,14 @@
     right: 0
     background-image: url(#{asset_path('icons/right-line-button.svg')})
 
+.section-holder
+  .section-title
+    display: inline-block
+  .corner-btn
+    position: relative
+    margin-bottom: 20px
+    margin-left: 20px
+
 .section-title
   position: relative
   font-family: 'Open Sans', sans-serif
@@ -109,7 +117,7 @@
     &:before
       // content: '\00A0'
   &.larger
-    +font-size(21px,48px,72px)
+    +font-size(24px,56px,72px)
   &:before, &:after
     display: block
     content: attr(data-text)

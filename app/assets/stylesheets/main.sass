@@ -177,6 +177,7 @@
     &:last-of-type
       background: $yellow
     &.active
+      cursor: initial
       width: calc(100% - 200px)
       &:before
         opacity: 0
@@ -251,3 +252,101 @@
       padding: 120px 100px 0 200px
       .large-title, .regular
         margin-bottom: 100px
+
+.games-wrap
+  .size-adjuster
+    position: relative
+    width: 100%
+    height: 0
+    padding-top: 56%
+    border: 1px solid rgba(white,0.3)
+    &.with-title
+      border: 0
+  .inner-text
+    +xy-align
+    width: 100%
+    text-align: center
+    pointer-events: none
+  .large-title
+    max-width: 80%
+    margin: 0 auto 20px
+  .genres
+    li
+      display: inline-block
+      color: $yellow
+      font-size: 14px
+      margin: 0 20px
+  .video-wrap
+    margin-bottom: 20px
+    cursor: pointer
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      opacity: 0
+      +transition(opacity .25s)
+    &:before
+      background: $cyan
+      z-index: -1
+    &:after
+      background: $red
+      z-index: -2
+    .video
+      +fullsize
+      +transition(opacity .5s)
+      opacity: 0
+      pointer-events: none
+      iframe
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+    &.playing
+      .video
+        opacity: 1
+        pointer-events: initial
+    &:hover
+      &:before, &:after
+        opacity: .8
+      &:before
+        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite
+      &:after
+        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+      .video
+        opacity: 1
+
+.contact-wrap
+  position: relative
+  .section-holder
+    .contact-subtitle
+      position: relative
+      text-transform: uppercase
+      margin-bottom: 20px
+      @media #{$large-up}
+        left: -50px
+    .address
+      display: inline-block
+      position: relative
+      color: rgba(white,0.6)
+      line-height: 1.25
+      span
+        display: block
+        color: rgba(white,0.3)
+      svg
+        position: absolute
+        width: 24px
+        height: 24px
+        left: -35px
+        top: 0
+        path
+          fill: $red
+        @media #{$small-only}
+          display: none
+      @media #{$large-up}
+        margin-left: 50px
+        vertical-align: bottom
