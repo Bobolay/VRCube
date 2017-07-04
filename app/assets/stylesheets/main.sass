@@ -133,6 +133,10 @@
 .accordion-wrap
   position: relative
   padding-top: 40%
+  @media #{$small-only}
+    padding-top: initial
+  @media #{$medium-only}
+    padding-top: 60%
   .acordion-container
     +fullsize
     display: -webkit-flex
@@ -141,34 +145,109 @@
     display: -o-flex
     display: flex
     align-items: stretch
+    @media #{$small-only}
+      flex-direction: column
+      position: relative
   .inner
+    position: relative
     width: 100px
     +transition(width .5s ceaser($easeOutCubic))
     cursor: pointer
-    &:first-child
+    overflow: hidden
+    &:before, &:after
+      content: ""
+      position: absolute
+      top: 24px
+      left: 38px
+      width: 24px
+      height: 24px
+      background-repeat: no-repeat
+      background-position: center
+      pointer-events: none
+      +transition(opacity .5s)
+    &:before
+      background-image: url(#{asset_path('icons/accordion-plus.svg')})
+    &:after
+      background-image: url(#{asset_path('icons/accordion-square.svg')})
+      opacity: 0
+    &:first-of-type
       background: $cyan
-    &:nth-child(2)
+    &:nth-of-type(2)
       background: $red
-    &:last-child
+    &:last-of-type
       background: $yellow
     &.active
       width: calc(100% - 200px)
-      .img
+      &:before
+        opacity: 0
+      &:after
+        opacity: 1
+      .img-holder
+        opacity: 1
+      .inner-text
         opacity: 1
     &:not(.active)
       z-index: 2
-  .img
+    @media #{$small-only}
+      width: 100%
+      &:before
+        display: none
+      &:after
+        opacity: 1
+        top: 10px
+        left: 15px
+      &.active
+        width: 100%
+  .img-holder
     position: absolute
     top: 0
     right: 0
     width: 50%
+    height: 100%
     opacity: 0
-    pointer-events: none
-    background-size: cover
-    +translate(-100px,0)
     +transition(opacity .2s)
-    &:before
-      content: ''
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    display: none
+    @media #{$large-up}
       display: block
-      padding-top: 80%
-
+  .label
+    text-transform: uppercase
+    position: absolute
+    bottom: 140px
+    left: -76px
+    letter-spacing: 5px
+    line-height: 1
+    +rotate(-90deg)
+    width: 250px
+    pointer-events: none
+    @media #{$small-only}
+      display: none
+  .inner-text
+    width: 600px
+    @media #{$small-only}
+      padding: 50px 20px 30px
+      max-width: 100%
+      .large-title, .regular
+        margin-bottom: 30px
+    @media #{$medium-up}
+      opacity: 0
+      +transition(opacity .25s)
+    @media #{$medium-only}
+      padding: 50px 100px 0
+      .large-title, .regular
+        margin-bottom: 50px
+    @media #{$large-up}
+      padding: 80px 100px 0
+      .large-title, .regular
+        margin-bottom: 70px
+    @media #{$xxlarge-up}
+      padding: 100px 100px 0 140px
+      width: 700px
+      .large-title, .regular
+        margin-bottom: 80px
+    @media screen and (min-width: 1920px)
+      padding: 120px 100px 0 200px
+      .large-title, .regular
+        margin-bottom: 100px
