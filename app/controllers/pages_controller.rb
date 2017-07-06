@@ -6,10 +6,4 @@ class PagesController < ApplicationController
   def index
   #   set_page_metadata(:home)
   end
-
-  private
-
-  def set_page_instance
-  #   set_page_metadata(action_name)
-  end
 end

@@ -1,33 +1,215 @@
 form
   position: relative
   padding: 30px
-  &.contact-form
-    background: $red
+  input, textarea, select
+    font-size: 16px
+    letter-spacing: 2px
+    color: white
+    display: block
+    padding: 20px
+    width: 100%
+    border: none
+    outline: none
+    background-color: transparent
+    +placeholder(white)
+    &:focus
+      outline: none
   .input-field
     position: relative
-    margin: 20px 0
-    border: 1px solid white
-    input, textarea, select
-      font-size: 16px
-      color: white
-      display: block
-      padding: 10px 20px
-      width: 100%
-      border: none
-      outline: none
-      background-color: transparent
-      &:focus
-        outline: none
-  .smaller
-    color: $grey900
+    margin: 30px 0
+    border: 1px solid rgba(white,0.5)
+    &:before, &:after
+      content: ''
+      background-image: url(#{asset_path('icons/cross-form.svg')})
+      position: absolute
+      top: -4px
+      height: 64px
+      width: 7px
+      background-repeat: no-repeat
+    &:before
+      left: -4px
+    &:after
+      right: -4px
+  .regular
+    font-weight: 700
+    margin-bottom: 20px
     span
       position: absolute
-      width: 36px
-      height: 36px
-      top: -4px
+      width: 24px
+      height: 24px
+      top: 0px
       left: -34px
+
+  &.contact-form
+    position: relative
+    background: $red
+    margin-top: 100px
+    padding: 50px 30px 80px
+    .regular
+      color: $grey900
       svg
         fill: $grey900
+    @media #{$small-only}
+      padding: 50px 30px
+    &:before
+      content: ''
+      +fullsize
+      +translate(calc(-100% + 2px),0)
+      background: $red
+      @media #{$small-only}
+        +scaleX(1.2)
+    .input-field
+      width: 300px
+      max-width: 100%
+    .corner-btn
+      margin-bottom: 50px
 
-.irka
-  margin: 200px
+    .form-img
+      position: absolute
+      width: 100%
+      height: calc(100% + 100px)
+      right: -50%
+      bottom: 0
+      background-position: center bottom
+      background-size: contain
+      background-repeat: no-repeat
+      @media #{$small-only}
+        display: none
+
+  &.reservation-form
+    +fullsize
+    background: url(#{asset_path('photo/background-noise.png')})
+    animation: grain 1s steps(21) infinite
+    padding-top: 100px
+    padding-bottom: 170px
+    @media #{$small-only}
+      padding-bottom: 130px
+    @media #{$xxlarge-up}
+      padding-bottom: 200px
+    .regular
+      color: $cyan
+      svg
+        fill: $cyan
+    .input-field
+      background: rgba(white,0.15)
+      @media #{$medium-only}
+        margin: 30px 10px 30px 0
+      @media #{$large-up}
+        margin: 30px 30px 30px 0
+    .players-qnty-container
+      position: relative
+    .underlay
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 23px
+      li
+        position: relative
+        display: inline-block
+        width: 20%
+        border-bottom: 1px solid rgba(white,0.5)
+        &:first-child
+          &:before
+            content: ''
+            width: 10px
+            height: 10px
+            position: absolute
+            left: -5px
+            top: -5px
+            background-image: url(#{asset_path('icons/cross.svg')})
+            background-repeat: no-repeat
+        &:after
+          content: ''
+          width: 10px
+          height: 10px
+          position: absolute
+          right: -5px
+          top: -5px
+          background-image: url(#{asset_path('icons/cross.svg')})
+          background-repeat: no-repeat
+    .players-qnty
+      counter-reset: players-qnty
+      width: 120%
+      left: -10%
+      li
+        position: relative
+        display: inline-block
+        width: calc(100% / 6)
+        height: 80px
+        counter-increment: players-qnty
+        cursor: pointer
+        &:after
+          content: counter(players-qnty)
+          +x-align
+          font-size: 14px
+          color: rgba(white,0.5)
+          bottom: 0
+          +transition(.25s)
+        input
+          position: absolute
+          visibility: hidden
+        label
+          +xy-align
+          width: 100%
+          height: 100%
+          cursor: pointer
+          z-index: 1
+          &:before
+            content: ''
+            width: 30px
+            height: 30px
+            +xy-align
+            background-image: url(#{asset_path('icons/vazonok.svg')})
+            background-repeat: no-repeat
+            opacity: 0
+        input[type=radio]:checked ~ label
+          &:before
+            opacity: 1
+        &:hover
+          &:after
+            color: $red
+
+
+
+    .select-aligner
+      @media #{$medium-only}
+        margin-right: 10px
+      @media #{$large-up}
+        margin-right: 30px
+
+    .reserve-btn
+      position: absolute
+      left: 10px
+      right: 10px
+      bottom: 10px
+      height: 120px
+      left: 0
+      background: rgba(white,0.05)
+      cursor: pointer
+      @media #{$small-only}
+        height: 80px
+      @media #{$xxlarge-up}
+        height: 150px
+      .large
+        +xy-align
+        font-size: 20px
+        color: rgba(white,0.5)
+        text-transform: uppercase
+        letter-spacing: 10px
+        +transition(.25s)
+      span
+        position: relative
+        top: 4px
+        display: inline-block
+        width: 24px
+        height: 24px
+        svg
+          width: 100%
+          height: 100%
+          fill: rgba(white,0.5)
+          +transition(.25s)
+      &:hover
+        .large
+          color: $red
+          svg
+            fill: $red

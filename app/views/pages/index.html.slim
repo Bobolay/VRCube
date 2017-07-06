@@ -81,7 +81,7 @@
       .inner-text
         p.large-title прийди з командою друзів
         p.regular Ви зможете поринути у небачений Віртуальний Світ, виконуючи фантастичні завдання.
-        .corner-btn
+        .corner-btn.wide.reserve-btn
           p
             | бронювання
             span = inline_svg "icons/calendar.svg"
@@ -91,7 +91,7 @@
       .inner-text
         p.large-title зроби дітям радість
         p.regular Бо в наші часи таких забавок не було.
-        .corner-btn
+        .corner-btn.wide.reserve-btn
           p
             | бронювання
             span = inline_svg "icons/calendar.svg"
@@ -101,20 +101,20 @@
       .inner-text
         p.large-title задоволення чекаж тебе вдома
         p.regular Ви зможете поринути у небачений Віртуальний Світ, виконуючи фантастичні завдання навіть у себе вдома.
-        .corner-btn
+        .corner-btn.wide.reserve-btn
           p
             | бронювання
             span = inline_svg "icons/calendar.svg"
 
 .games-wrap.section-indent
   .row.columns-left
-    .columns.medium-4
+    .columns.medium-6.large-4
       .size-adjuster.with-title
         .inner-text
           p.section-title.larger.centered data-text="vr ігри"
             | vr
             span &nbsp;ігри
-    .columns.medium-4
+    .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
           p.large-title raw data
@@ -125,7 +125,7 @@
             li Co-op
         .video
           iframe width="1280" height="720" src="https://www.youtube.com/embed/mKzLoZFz8PE" frameborder="0" allowfullscreen=""
-    .columns.medium-4
+    .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
           p.large-title fantastic contraption
@@ -136,7 +136,7 @@
             li Co-op
         .video
           iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
-    .columns.medium-4
+    .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
           p.large-title raw data
@@ -147,7 +147,7 @@
             li Co-op
         .video
           iframe width="1280" height="720" src="https://www.youtube.com/embed/mKzLoZFz8PE" frameborder="0" allowfullscreen=""
-    .columns.medium-4
+    .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
           p.large-title fantastic contraption
@@ -175,19 +175,21 @@
           span будівля “Аквапарку”
 
       .row
-        .columns.large-8
+        .columns.medium-10.large-8
           form.contact-form
-            p.smaller
+            p.regular
               | Внесіть дані і ми вам перетелефонуємо
               span = inline_svg "icons/mail.svg"
             .input-field
               input placeholder="Ваше ім'я" name="name"
             .input-field
-              input placeholder="Ваше ім'я" name="name"
-            .corner-btn
+              input placeholder="Контактний телефон" name="phone"
+            .corner-btn.wide
               p
                 | замовити
-            p.smaller
+            p.regular
               | Або бронюйте за телефоном
               span = inline_svg "icons/phone.svg"
             a.large 097 456-21-45
+
+            .form-img style="background-image: url(#{asset_path('photo/person-form.png')})"

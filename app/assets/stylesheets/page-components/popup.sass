@@ -1,0 +1,70 @@
+.popup-wrap
+  position: fixed
+  width: 100%
+  height: 100vh
+  overflow: auto
+  z-index: 11
+  opacity: 0
+  pointer-events: none
+  +transition(opacity .25s)
+  .map-container, form.reservation-form
+    opacity: 0
+    pointer-events: none
+  &.turn-off-effect
+    animation: turn-off 0.5s $ease-out-quint
+    animation-fill-mode: forwards
+    animation-iteration-count: 1
+  &.show-map
+    opacity: 1
+    pointer-events: initial
+    .map-container
+      opacity: 1
+      pointer-events: initial
+  &.show-reserve-form
+    opacity: 1
+    pointer-events: initial
+    form.reservation-form
+      opacity: 1
+      pointer-events: initial
+
+  .close-popup
+    position: absolute
+    top: 30px
+    right: 30px
+    z-index: 1
+    cursor: pointer
+    p
+      display: inline-block
+      font-size: 14px
+      text-transform: uppercase
+      letter-spacing: 5px
+      color: $red
+      font-weight: 700
+      line-height: 1
+      margin-right: 20px
+    svg
+      vertical-align: middle
+
+  .map-container
+    +fullsize
+    overflow: hidden
+    &:before
+      content: ''
+      position: absolute
+      width: 120%
+      height: 100%
+      left: -10%
+      pointer-events: none
+      z-index: 1
+    &:before
+      top: 0
+      @media #{$small-only}
+        box-shadow: inset 0 0 150px rgba(0,0,0,0.7)
+      @media #{$medium-up}
+        box-shadow: inset 0 0 250px rgba(0,0,0,0.7)
+      @media #{$xxlarge-up}
+        box-shadow: inset 0 0 350px rgba(0,0,0,0.7)
+  #googleMap
+    position: absolute
+    width: 100%
+    height: 100%

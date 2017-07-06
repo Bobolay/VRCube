@@ -9,7 +9,9 @@ html
     = csrf_meta_tags
   body
     = render "header"
+    = render "popup"
     .main-wrapper
       = yield
     = render "footer"
+    script src="//maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS_API_KEY']}"
     = javascript_include_tag "application", 'data-turbolinks-track' => true

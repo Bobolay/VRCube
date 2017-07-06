@@ -1,0 +1,29 @@
+footer
+  background: black
+  padding: 10px 0
+  @media #{$small-only}
+    text-align: center
+
+  svg
+    position: relative
+    width: 30px
+    height: 30px
+    fill: white
+    vertical-align: top
+    margin-right: 10px
+    top: -6px
+
+  .regular
+    color: rgba(white,0.5)
+    display: inline-block
+    a
+      &:hover
+        color: white
+
+  .floated, .floated-right
+    padding: 20px
+    @media #{$small-only}
+      width: 100%
+  .floated-right
+    @media #{$small-only}
+      margin-top: -10px

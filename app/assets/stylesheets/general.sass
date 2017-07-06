@@ -7,9 +7,15 @@ body
   &:before
     content: ''
     display: block
-    +fullsize
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
     opacity: 0.2
     background: url(#{asset_path('photo/background-lines.png')})
+  &.hidden
+    overflow: hidden
 
 @each $header, $font-size in (h1: 28px, h2: 24px, h3: 22px, h4: 20px, h5: 18px, h6: 16px)
   #{$header}, .#{$header}

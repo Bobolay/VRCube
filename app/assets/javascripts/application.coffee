@@ -15,13 +15,17 @@
 #= require plugins/jquery.scrolldelta
 #= require plugins/jquery.validate.min
 #= require plugins/messages_uk
+#= require plugins/jquery.timepicker.min
+#= require plugins/jquery.nice-select.min
 
 #     I N I T I A L I Z E
 
-# require google_map
+#= require google_map
 #= require appear-initialize
 #= require bxslider
 #= require header
-#= require menu
+#= require menu_and_popups
 #= require accordion
 #= require play-video
+#= require timepick
+#= require niceselect

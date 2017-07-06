@@ -322,7 +322,10 @@
 
 .contact-wrap
   position: relative
+  overflow: hidden
   .section-holder
+    position: relative
+    z-index: 1
     .contact-subtitle
       position: relative
       text-transform: uppercase
@@ -350,3 +353,7 @@
       @media #{$large-up}
         margin-left: 50px
         vertical-align: bottom
+    @media #{$small-only}
+      text-align: center
+      .section-title, .address
+        display: block

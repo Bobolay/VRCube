@@ -1,0 +1,78 @@
+.popup-wrap.reservation
+  
+  .close-popup
+    p закрити карту
+    = inline_svg "icons/close-icon.svg"
+
+  .map-container
+    #googleMap
+
+  form.reservation-form
+
+    .row
+      .columns.medium-11.medium-centered.large-8
+        .row
+          .columns.medium-6
+            p.regular
+              | Внесіть дані і ми вам перетелефонуємо
+              span = inline_svg "icons/mail.svg"
+            .input-field
+              input placeholder="Ваше ім'я" name="name"
+            .input-field
+              input placeholder="Контактний телефон" name="phone"
+          .columns.medium-6
+            p.regular
+              | Внесіть дані і ми вам перетелефонуємо
+              span = inline_svg "icons/calendar.svg"
+            .input-field
+              input.datepicker name="date"
+            .input-field
+              input.timepicker placeholder="Година" name="time"
+
+          .columns.medium-8
+            p.regular
+              | Кількість гравців
+              span = inline_svg "icons/form-players.svg"
+            .players-qnty-container
+              ul.underlay
+                li
+                li
+                li
+                li
+                li
+              ul.players-qnty
+                li
+                  input#q-option type="radio" name="players-qnty" checked=""
+                  label for="q-option"
+                li
+                  input#w-option type="radio" name="players-qnty"
+                  label for="w-option"
+                li
+                  input#e-option type="radio" name="players-qnty"
+                  label for="e-option"
+                li
+                  input#r-option type="radio" name="players-qnty"
+                  label for="r-option"
+                li
+                  input#t-option type="radio" name="players-qnty"
+                  label for="t-option"
+                li
+                  input#y-option type="radio" name="players-qnty"
+                  label for="y-option"
+
+          .columns.medium-3
+            p.regular
+              | Тривалість суансу
+              span = inline_svg "icons/form-time.svg"
+            .select-aligner
+              select.nice-select name="duration"
+                option value="" data-display="45 ХВ" 45 ХВ
+                option value="1" 1 ГОД
+                option value="2" 1.5 ГОД
+                option value="3" 2 ГОД
+                option value="4" на ночьку
+
+    .reserve-btn
+      p.large
+        | бронювання
+        span = inline_svg "icons/calendar.svg"
