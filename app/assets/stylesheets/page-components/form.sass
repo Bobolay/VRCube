@@ -11,7 +11,7 @@ form
     border: none
     outline: none
     background-color: transparent
-    +placeholder(white)
+    +placeholder(rgba(white,.7))
     &:focus
       outline: none
   .input-field
@@ -77,27 +77,70 @@ form
         display: none
 
   &.reservation-form
-    +fullsize
-    background: url(#{asset_path('photo/background-noise.png')})
-    animation: grain 1s steps(21) infinite
-    padding-top: 100px
-    padding-bottom: 170px
-    @media #{$small-only}
-      padding-bottom: 130px
-    @media #{$xxlarge-up}
-      padding-bottom: 200px
+    position: relative
+    min-height: 100%
+    padding-bottom: 200px
+    .form-inner
+      @media screen and (min-width: 1920px)
+        padding-top: 100px
+    .top-btn-container
+      text-align: center
+      margin-top: -30px
+      @media #{$small-only}
+        margin-top: 80px
+        margin-bottom: 30px
+      .top-btn
+        position: relative
+        color: rgba(white,0.5)
+        text-transform: uppercase
+        font-weight: 700
+        letter-spacing: 5px
+        padding: 10px
+        cursor: pointer
+        +transition(.25s)
+        @media #{$medium-up}
+          display: inline-block
+          padding: 20px
+          margin: 0 30px 20px
+        &.active
+          color: $red
+          @media #{$medium-up}
+            &:before
+              content: ''
+              display: block
+              position: absolute
+              width: 100%
+              height: 5px
+              background: $red
+              box-shadow: 0 10px 30px rgba($red,.7)
+              top: 0
+              left: 0
+        &:hover
+          color: $red
+    .address-input
+      display: none
+      &.visible 
+        display: block
+    .select-aligner
+      @media #{$medium-only}
+        margin-right: 10px
+      @media #{$large-up}
+        margin-right: 30px
     .regular
+      margin-top: 30px
       color: $cyan
       svg
         fill: $cyan
     .input-field
       background: rgba(white,0.15)
+      border: 0
       @media #{$medium-only}
         margin: 30px 10px 30px 0
       @media #{$large-up}
         margin: 30px 30px 30px 0
     .players-qnty-container
       position: relative
+      margin-top: 36px
     .underlay
       position: absolute
       width: 100%
@@ -111,8 +154,8 @@ form
         &:first-child
           &:before
             content: ''
-            width: 10px
-            height: 10px
+            width: 11px
+            height: 11px
             position: absolute
             left: -5px
             top: -5px
@@ -120,8 +163,8 @@ form
             background-repeat: no-repeat
         &:after
           content: ''
-          width: 10px
-          height: 10px
+          width: 11px
+          height: 11px
           position: absolute
           right: -5px
           top: -5px
@@ -143,7 +186,7 @@ form
           +x-align
           font-size: 14px
           color: rgba(white,0.5)
-          bottom: 0
+          bottom: -15px
           +transition(.25s)
         input
           position: absolute
@@ -156,34 +199,30 @@ form
           z-index: 1
           &:before
             content: ''
-            width: 30px
-            height: 30px
-            +xy-align
+            width: 40px
+            height: 40px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%) scale(0)
             background-image: url(#{asset_path('icons/vazonok.svg')})
             background-repeat: no-repeat
             opacity: 0
+            +transition(.3s ceaser($easeOutBack))
         input[type=radio]:checked ~ label
           &:before
+            transform: translate(-50%,-50%) scale(1)
             opacity: 1
         &:hover
           &:after
             color: $red
 
-
-
-    .select-aligner
-      @media #{$medium-only}
-        margin-right: 10px
-      @media #{$large-up}
-        margin-right: 30px
-
     .reserve-btn
       position: absolute
-      left: 10px
-      right: 10px
-      bottom: 10px
-      height: 120px
       left: 0
+      bottom: 0
+      width: 100%
+      height: 120px
       background: rgba(white,0.05)
       cursor: pointer
       @media #{$small-only}
@@ -191,6 +230,7 @@ form
       @media #{$xxlarge-up}
         height: 150px
       .large
+        width: 100%
         +xy-align
         font-size: 20px
         color: rgba(white,0.5)
@@ -213,3 +253,8 @@ form
           color: $red
           svg
             fill: $red
+
+label.error
+  position: absolute
+  font-size: 12px
+  color: $red

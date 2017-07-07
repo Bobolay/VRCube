@@ -1,7 +1,7 @@
 .popup-wrap.reservation
   
   .close-popup
-    p закрити карту
+    p закрити
     = inline_svg "icons/close-icon.svg"
 
   .map-container
@@ -9,17 +9,30 @@
 
   form.reservation-form
 
-    .row
+    .top-btn-container
+      .top-btn.active
+        | замовлення сеансу
+      .top-btn.show-address
+        | замовити vr на дім
+
+    .row.form-inner
       .columns.medium-11.medium-centered.large-8
         .row
+          .columns.address-input
+            p.regular
+              | Куди привозимо VR
+              span = inline_svg "icons/location.svg"
+            .input-field
+              input placeholder="Адреса" name="address" type="text"
+
           .columns.medium-6
             p.regular
               | Внесіть дані і ми вам перетелефонуємо
               span = inline_svg "icons/mail.svg"
             .input-field
-              input placeholder="Ваше ім'я" name="name"
+              input placeholder="Ваше ім'я" name="name" type="text"
             .input-field
-              input placeholder="Контактний телефон" name="phone"
+              input placeholder="Контактний телефон" name="phone" type="text"
           .columns.medium-6
             p.regular
               | Внесіть дані і ми вам перетелефонуємо
@@ -72,7 +85,7 @@
                 option value="3" 2 ГОД
                 option value="4" на ночьку
 
-    .reserve-btn
+    button.reserve-btn
       p.large
         | бронювання
         span = inline_svg "icons/calendar.svg"

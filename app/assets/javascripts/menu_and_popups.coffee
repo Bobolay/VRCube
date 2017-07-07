@@ -31,3 +31,13 @@ $document.on 'click', '.close-popup', ->
       body.removeClass('hidden')
     501
   )
+
+$document.on 'click', '.top-btn', ->
+
+  btn = $(this)
+  btn.parent().children().removeClass('active')
+  btn.addClass('active')
+  if btn.hasClass('show-address')
+    $('.address-input').addClass('visible')
+  else
+    $('.address-input').removeClass('visible')

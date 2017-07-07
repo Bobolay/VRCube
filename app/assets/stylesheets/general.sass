@@ -1,7 +1,7 @@
 body
   font-family: 'Anonymous Pro', monospace
   color: white
-  background: url(#{asset_path('photo/background-noise.png')})
+  background: url(#{asset_path('photo/background-noise.jpg')})
   animation: grain 1s steps(21) infinite
   opacity: 1
   &:before
@@ -12,8 +12,19 @@ body
     left: 0
     right: 0
     bottom: 0
-    opacity: 0.2
+    opacity: 0.15
     background: url(#{asset_path('photo/background-lines.png')})
+  &:after
+    content: ''
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0.25
+    background-image: radial-gradient(ellipse at center, #183573, #141530 70%)
+    z-index: -1
   &.hidden
     overflow: hidden
 

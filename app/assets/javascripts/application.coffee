@@ -29,3 +29,4 @@
 #= require play-video
 #= require timepick
 #= require niceselect
+#= require validate

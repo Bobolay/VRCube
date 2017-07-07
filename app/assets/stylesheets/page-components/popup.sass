@@ -5,11 +5,15 @@
   overflow: auto
   z-index: 11
   opacity: 0
+  background: url(#{asset_path('photo/background-noise.jpg')})
+  animation: grain 1s steps(21) infinite
   pointer-events: none
   +transition(opacity .25s)
-  .map-container, form.reservation-form
+  .map-container
     opacity: 0
     pointer-events: none
+  form.reservation-form
+    display: none
   &.turn-off-effect
     animation: turn-off 0.5s $ease-out-quint
     animation-fill-mode: forwards
@@ -24,8 +28,7 @@
     opacity: 1
     pointer-events: initial
     form.reservation-form
-      opacity: 1
-      pointer-events: initial
+      display: block
 
   .close-popup
     position: absolute
@@ -42,6 +45,11 @@
       font-weight: 700
       line-height: 1
       margin-right: 20px
+    @media #{$small-only}
+      top: 20px
+      right: 20px
+      p
+        display: none
     svg
       vertical-align: middle
 
