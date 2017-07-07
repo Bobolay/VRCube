@@ -52,6 +52,12 @@
         display: none
     svg
       vertical-align: middle
+      rect
+        +transition(.25s)
+    &:hover
+      svg
+        rect
+          fill: $red
 
   .map-container
     +fullsize

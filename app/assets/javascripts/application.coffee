@@ -17,6 +17,7 @@
 #= require plugins/messages_uk
 #= require plugins/jquery.timepicker.min
 #= require plugins/jquery.nice-select.min
+#= require plugins/scroll-banner
 
 #     I N I T I A L I Z E
 

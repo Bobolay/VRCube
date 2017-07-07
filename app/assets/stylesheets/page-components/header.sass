@@ -2,6 +2,12 @@ nav
   position: fixed
   width: 100%
   z-index: 1
+  +transition-property(transform)
+  +transition-duration(1s)
+  +translate(0,-100%)
+  z-index: 11
+  &.scrolled, &.visible
+    +translate(0,0)
   .logo
     display: inline-block
     width: 120px

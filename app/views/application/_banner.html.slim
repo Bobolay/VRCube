@@ -15,20 +15,20 @@
             | майбутнє вже поруч
 
         .contact-us-field
-          .order-btn.reserve-btn
+          .order-btn.reserve-btn title="Забронювати гру"
             | бронювання
             = inline_svg "icons/calendar"
-          a.contact-phone
+          a.contact-phone title="Подзвонити нам" href="tel:0974562145"
             span 097
             | 456-21-45
 
   ul.socials
     li
-      = inline_svg "icons/social-fb.svg"
+      a title="Відвідати нас в соцмережі" = inline_svg "icons/social-fb.svg"
     li
-      = inline_svg "icons/social-instagram.svg"
+      a title="Відвідати нас в соцмережі" = inline_svg "icons/social-instagram.svg"
 
-  .read-more
+  .read-more title="Дізнатись про нас більше"
     p
       | детальніше
     = inline_svg "icons/arrow-more-main-banner.svg"
