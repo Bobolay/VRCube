@@ -29,7 +29,7 @@ $document.on 'click', '.close-popup', ->
     ->
       popup.removeClass('show-map show-reserve-form')
       body.removeClass('hidden')
-    501
+    500
   )
 
 $document.on 'click', '.top-btn', ->

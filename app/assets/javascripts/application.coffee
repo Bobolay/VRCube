@@ -33,3 +33,4 @@
 #= require timepick
 #= require niceselect
 #= require validate
+#= require animations
