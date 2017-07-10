@@ -195,7 +195,7 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('googleMap'),
     mapOptions);
 
-  var image = '/assets/icons/map-marker.svg'
+  var image = images.map_marker
 
   var marker = new google.maps.Marker({
     map: map,
@@ -203,6 +203,17 @@ function initialize() {
     position: new google.maps.LatLng(xCordinate, yCordinate),
     icon: image
   });
+
+  var infoWindow = new SnazzyInfoWindow({
+      marker: marker,
+      content:  '<div class="iw-header">'+
+                  '<p>vr<span>cube</span></p>'+
+                '</div>'+
+                '<div class="iw-address">'+
+                  '<p>вул. Княгині Ольги 114</p>'+
+                  '<p>Львів, Україна</p><span>будівля “Аквапарку”</span>'+
+                '</div>'
+  }).open();
 
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');

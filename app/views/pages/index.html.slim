@@ -160,7 +160,7 @@
           iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
 
 .contact-wrap
-  .img-bg style="background-image: url(#{asset_path('photo/background-photo-bottom.jpg')})"
+  .img-bg style="background-image: url(#{asset_path('photo/background-photo-bottom.png')})"
   .row
     .columns.large-10.large-centered
       .section-holder
@@ -181,10 +181,10 @@
               | Внесіть дані і ми вам перетелефонуємо
               span = inline_svg "icons/mail.svg"
             .input-field
-              input placeholder="Ваше ім'я" name="name"
+              input placeholder="Ваше ім'я" name="name" type="text"
             .input-field
-              input placeholder="Контактний телефон" name="phone"
-            .corner-btn.wide
+              input placeholder="Контактний телефон" name="phone" type="text"
+            button.corner-btn.wide
               p
                 | замовити
             p.regular

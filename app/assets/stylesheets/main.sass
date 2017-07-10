@@ -179,6 +179,14 @@
       background: $red
     &:last-of-type
       background: $yellow
+      color: $grey900
+      .corner-btn
+        svg
+          fill: $grey900
+        &:before
+          background-image: url(#{asset_path('icons/left-line-button-b.svg')})
+        &:after
+          background-image: url(#{asset_path('icons/right-line-button-b.svg')})
     &.active
       cursor: initial
       width: calc(100% - 200px)
@@ -326,6 +334,9 @@
 .contact-wrap
   position: relative
   overflow: hidden
+  .img-bg
+    background-position: right bottom
+    background-size: contain
   .section-holder
     position: relative
     z-index: 1
@@ -360,3 +371,36 @@
       text-align: center
       .section-title, .address
         display: block
+
+.si-wrapper-top
+  .si-content-wrapper
+    padding: 0
+    border: 0
+    background-color: transparent
+  // close btn
+  .si-close-button
+    display: none
+  // bottom corner
+  .si-pointer-top
+    display: none
+
+  .iw-header
+    padding: 20px 30px
+    background: $dark
+    p
+      font-size: 16px
+      text-transform: uppercase
+      letter-spacing: 5px
+      span
+        opacity: 0.6
+  .iw-address
+    padding: 20px 30px
+    background: $red
+    p
+      font-size: 16px
+      font-weight: 700
+    span
+      display: block
+      font-size: 14px
+      margin-top: 10px
+      opacity: 0.6

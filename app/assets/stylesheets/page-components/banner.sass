@@ -49,10 +49,12 @@
       &:before
         color: $cyan
         z-index: -1
+        filter: blur(1px)
         animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite
       &:after
         color: $red
         z-index: -2
+        filter: blur(1px)
         animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
       @media #{$small-only}
         font-size: 50px
@@ -62,6 +64,8 @@
     @media #{$large-up}
       text-align: left
       width: initial
+    @media screen and (min-width: 1920px)
+      height: 484px
     .subheader
       text-transform: uppercase
       letter-spacing: 5px

@@ -21,7 +21,9 @@
 
 #     I N I T I A L I Z E
 
+#= require images.js.erb
 #= require google_map
+#= require plugins/snazzy-info-window.min
 #= require appear-initialize
 #= require bxslider
 #= require header

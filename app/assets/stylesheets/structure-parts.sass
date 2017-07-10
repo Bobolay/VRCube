@@ -109,6 +109,8 @@
     margin-bottom: 20px
     margin-left: 20px
     cursor: initial
+    @media #{$xxlarge-up}
+      margin-bottom: 16px
 
 .section-title
   position: relative
@@ -136,10 +138,12 @@
   &:before
     color: $cyan
     z-index: -1
+    filter: blur(1px)
     animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite
   &:after
     color: $red
     z-index: -2
+    filter: blur(1px)
     animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
 
 .section-subtitle
