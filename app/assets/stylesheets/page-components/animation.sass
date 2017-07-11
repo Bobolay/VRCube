@@ -31,7 +31,7 @@
     -webkit-transform: translate(0)
     transform: translate(0)
 
-
+//     c l o s e     p o p u p
 
 @keyframes turn-off
   0%
@@ -70,3 +70,130 @@
     -webkit-filter: brightness(1)
     filter: brightness(1)
     opacity: 1
+
+//     a p p e a r     a n i m a t i o n s
+
+=UD-start
+  +transition(all 1s ceaser($easeOutCubic))
+  +translate(0,75px)
+  opacity: 0
+=UD-end
+  +translate(0,0)
+  opacity: 1
+
+.slide-up
+  +UD-start
+  &.animate
+    +UD-end
+
+=anim-start($transition: .5s, $transition-delay: .5s)
+  @for $i from 1 through 20
+    &:nth-child(#{$i})
+      opacity: 0
+      transition: #{$i*$transition} ceaser($easeInOutQuart)
+      transition-delay: $transition-delay
+      transition-property: opacity, transform
+=anim-end()
+  @for $i from 1 through 20
+    &:nth-child(#{$i})
+      opacity: 1
+
+.fade-in-childrens
+  .columns
+    +anim-start
+  &.animate
+    .columns
+      +anim-end
+
+//    h o v e r     b t n     a n i m
+
+@keyframes hover-btn
+  1%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  7%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  15%
+    background: #87041d
+    box-shadow: 0 0 100px 0 #690619
+    color: #690619
+  20%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  25%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  28%
+    background: #87041d
+    box-shadow: 0 0 100px 0 #690619
+    color: #690619
+  30%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  32%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  33%
+    background: #87041d
+    box-shadow: 0 0 100px 0 #690619
+    color: #690619
+  34%
+    background: #87041d
+    box-shadow: 0 0 100px 0 #690619
+    color: #690619
+  35%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  40%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+  43%
+    background: #87041d
+    box-shadow: 0 0 100px 0 #690619
+    color: #690619
+  47%
+    background: $red
+    box-shadow: 0 0 100px 0 $red
+    color: #fff
+
+
+//     h o v e r     b t n     s q u a r e
+
+@keyframes hover-btn-squared
+  1%
+    background: transparent
+  7%
+    background: rgba(white,0.1)
+  15%
+    background: transparent
+  20%
+    background: rgba(white,0.1)
+  25%
+    background: rgba(white,0.2)
+  28%
+    background: transparent
+  30%
+    background: rgba(white,0.2)
+  32%
+    background: rgba(white,0.2)
+  33%
+    background: transparent
+  34%
+    background: transparent
+  35%
+    background: rgba(white,0.3)
+  40%
+    background: rgba(white,0.3)
+  43%
+    background: transparent
+  47%
+    background: rgba(white,0.4)

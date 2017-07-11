@@ -9,6 +9,17 @@
   animation: grain 1s steps(21) infinite
   pointer-events: none
   +transition(opacity .25s)
+  &:after
+    content: ''
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0.25
+    background-image: radial-gradient(ellipse at center, #183573, #141530 70%)
+    z-index: -1
   .map-container
     opacity: 0
     pointer-events: none

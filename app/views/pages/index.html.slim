@@ -1,6 +1,6 @@
 = render "banner"
 
-.row.section-indent
+.row.section-indent.slide-up
   .columns
     p.section-title data-text="технологія vr"
       | технологія
@@ -8,7 +8,7 @@
     p.section-subtitle
       | Нова технологія безконтактної інформаційної взаємодії
       
-.slider-wrap
+.slider-wrap.slide-up
   .slide-img
     ul.games-slider
       li
@@ -49,31 +49,32 @@
 .virtual-reality-wrap
 
   .row
-    .columns.medium-6.float-right
+    .columns.medium-6.float-right.slide-up
       p.large-title
         | Сьогодні це можливо за допомогою технологій віртуальної реальності
       p.regular
         | Віртуальна реальність – це технологія з допомогою якої ви зможете поринути у світ, де
         span немає меж реальності.
     .columns.medium-5.medium-push-1.large-4.float-left
-      .img style="background-image: url(#{asset_path('photo/slider-1.jpg')})"
+      .img.slide-up
+        .img-bg style="background-image: url(#{asset_path('photo/slider-1.jpg')})"
 
 .row.section-indent
-  .columns.large-9.large-push-3
+  .columns.large-9.large-push-3.slide-up
     .section-holder
       p.section-title.larger.centered data-text="vrcube"
         | vr
         span cube
       .corner-btn.square = inline_svg "icons/play.svg"
 
-  .columns.medium-6
+  .columns.medium-6.slide-up
     p.section-subtitle
       |&mdash; справжні
       span VR
       |технології та інфраструктура, створена для  задоволення і розваг де кожний знайде щось
       span для себе.
 
-.accordion-wrap
+.accordion-wrap.slide-up
   .acordion-container
     .inner.active
       p.label vr з друзями
@@ -89,8 +90,8 @@
       p.label vr для дітей
       .img-holder style="background-image: url(#{asset_path('photo/slider-about-2.jpg')})"
       .inner-text
-        p.large-title зроби дітям радість
-        p.regular Бо в наші часи таких забавок не було.
+        p.large-title VR для наших малих відвідувачів
+        p.regular Є місце і для маленьких відвідувачів, які із захопленням зможуть відчути переваги розвиваючих ігор у віртуальній реальності.
         .corner-btn.wide.reserve-btn
           p
             | бронювання
@@ -99,15 +100,15 @@
       p.label vr на дім
       .img-holder style="background-image: url(#{asset_path('photo/slider-about-3.jpg')})"
       .inner-text
-        p.large-title задоволення чекаж тебе вдома
-        p.regular Ви зможете поринути у небачений Віртуальний Світ, виконуючи фантастичні завдання навіть у себе вдома.
+        p.large-title VR у ваш дім
+        p.regular Наш спеціаліст доставить обладнання VR на ваше свято і воно стане незабутнім для ваших гостей.
         .corner-btn.wide.reserve-btn
           p
             | бронювання
             span = inline_svg "icons/calendar.svg"
 
 .games-wrap.section-indent
-  .row.columns-left
+  .row.columns-left.fade-in-childrens
     .columns.medium-6.large-4
       .size-adjuster.with-title
         .inner-text
@@ -124,7 +125,7 @@
             li FPS
             li Co-op
         .video
-          iframe width="1280" height="720" src="https://www.youtube.com/embed/mKzLoZFz8PE" frameborder="0" allowfullscreen=""
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/V5xmwgQzEYI" frameborder="0" allowfullscreen=""
     .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
@@ -135,7 +136,7 @@
             li FPS
             li Co-op
         .video
-          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/N4ony2r0QFs" frameborder="0" allowfullscreen=""
     .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
@@ -146,7 +147,7 @@
             li FPS
             li Co-op
         .video
-          iframe width="1280" height="720" src="https://www.youtube.com/embed/mKzLoZFz8PE" frameborder="0" allowfullscreen=""
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/K4zm30yeHHE" frameborder="0" allowfullscreen=""
     .columns.medium-6.large-4
       .size-adjuster.video-wrap
         .inner-text
@@ -157,26 +158,59 @@
             li FPS
             li Co-op
         .video
-          iframe src="https://player.vimeo.com/video/222111805" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-play="0"
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/cCLUJDsSeIg" frameborder="0" allowfullscreen=""
+    .columns.medium-6.large-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title fantastic contraption
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/K-5EdHZ0hBs" frameborder="0" allowfullscreen=""
+    .columns.medium-6.large-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title raw data
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/zjc1Txc4r4w" frameborder="0" allowfullscreen=""
+    .columns.medium-6.large-4
+      .size-adjuster.video-wrap
+        .inner-text
+          p.large-title fantastic contraption
+          ul.genres
+            li Action
+            li Indie
+            li FPS
+            li Co-op
+        .video
+          iframe width="1280" height="720" src="https://www.youtube.com/embed/jwK4oKIKrts" frameborder="0" allowfullscreen=""
 
 .contact-wrap
   .img-bg style="background-image: url(#{asset_path('photo/background-photo-bottom.png')})"
   .row
     .columns.large-10.large-centered
-      .section-holder
+      .section-holder.slide-up
         p.contact-subtitle
           | Не гайте часу, завітайте у
         p.section-title.larger data-text="vrcube"
           | vr
           span cube
-        p.address
+        p.address.map-btn
           = inline_svg "icons/location.svg"
           | вул. Княгині Ольги 114
           span будівля “Аквапарку”
 
       .row
         .columns.medium-10.large-8
-          form.contact-form
+          form.contact-form.slide-up
             p.regular
               | Внесіть дані і ми вам перетелефонуємо
               span = inline_svg "icons/mail.svg"
@@ -190,6 +224,7 @@
             p.regular
               | Або бронюйте за телефоном
               span = inline_svg "icons/phone.svg"
-            a.large 097 456-21-45
+            a.large href="tel:0679931074"
+              | 067 993-10-74
 
             .form-img style="background-image: url(#{asset_path('photo/person-form.png')})"

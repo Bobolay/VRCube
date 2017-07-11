@@ -123,6 +123,12 @@
       background: $yellow
       box-shadow: 0 0 100px 0 rgba($yellow,1)
       z-index: -1
+      +transition(transform 1s)
+      +scaleY(0)
+      +transform-origin(bottom)
+    &.animate
+      &:before
+        +scaleY(1)
     @media #{$medium-up}
       padding-bottom: 150%
       margin-top: 30px
@@ -351,9 +357,16 @@
       position: relative
       color: rgba(white,0.6)
       line-height: 1.25
+      cursor: pointer
+      +transition(.25s)
       span
         display: block
         color: rgba(white,0.3)
+        +transition(.25s)
+      &:hover
+        color: $red
+        span
+          color: rgba(white,0.5)
       svg
         position: absolute
         width: 24px
@@ -373,6 +386,7 @@
         display: block
 
 .si-wrapper-top
+  margin-top: -70px
   .si-content-wrapper
     padding: 0
     border: 0
@@ -382,8 +396,10 @@
     display: none
   // bottom corner
   .si-pointer-top
-    display: none
-
+    // display: none
+  // zyb4uk color
+  .si-pointer-bg-top
+    border-top-color: $red
   .iw-header
     padding: 20px 30px
     background: $dark

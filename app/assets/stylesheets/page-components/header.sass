@@ -8,6 +8,15 @@ nav
   z-index: 11
   &.scrolled, &.visible
     +translate(0,0)
+  &.scrolled
+    background: linear-gradient(to bottom, rgba($dark,0.7), transparent)
+    .right-part
+      .contact-phone
+        opacity: 1
+        pointer-events: initial
+      .reserve-btn
+        opacity: 1
+        pointer-events: initial
   .logo
     display: inline-block
     width: 120px
@@ -32,3 +41,31 @@ nav
       &:last-child
         @media #{$small-only}
           display: none
+    .contact-phone
+      opacity: 0
+      pointer-events: none
+      +transition(opacity .25s)
+      letter-spacing: 5px
+      +transition(.25s)
+      span
+        color: $red
+        margin-right: 5px
+      &:hover
+        color: $red
+      @media #{$small-only}
+        display: none
+    .reserve-btn
+      width: initial
+      opacity: 0
+      pointer-events: none
+      +transition(opacity .25s)
+      @media #{$small-only}
+        p
+          display: none
+      @media #{$medium-up}
+        svg
+          display: none
+    .toggle-language
+      p
+        position: relative
+        left: -2px
