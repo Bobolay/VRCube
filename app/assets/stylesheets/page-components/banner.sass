@@ -17,7 +17,7 @@
       pointer-events: none
   .main-img-holder
     position: relative
-    z-index: 11
+    z-index: 2
   .main-photo
     position: relative
     height: 80vh
@@ -105,7 +105,6 @@
         cursor: pointer
         opacity: 0
         +transition(.5s)
-        // +transition-delay(1s)
         &:hover
           animation: hover-btn 0.7s
         svg
@@ -128,19 +127,18 @@
         height: 87px
         background: $cyan
         z-index: -1
-        +transition(.8s)
         display: none
       @media #{$large-up}
         &:before
           display: block
           +scaleX(0)
-          +transition(1s)
+          +transition(.5s)
           transform-origin: 0 0
       &.show-btn
         &:before
           +scaleX(1)
         .order-btn
-          +transition-delay(1s)
+          +transition-delay(.7s)
           opacity: 1
       &.light-on
         &:before
