@@ -82,11 +82,12 @@
   opacity: 1
 
 .slide-up
-  +UD-start
-  &.animate
-    +UD-end
+  @media #{$medium-up}
+    +UD-start
+    &.animate
+      +UD-end
 
-=anim-start($transition: .5s, $transition-delay: .5s)
+=anim-start($transition: .5s, $transition-delay: 0s)
   @for $i from 1 through 20
     &:nth-child(#{$i})
       opacity: 0
@@ -99,11 +100,12 @@
       opacity: 1
 
 .fade-in-childrens
-  .columns
-    +anim-start
-  &.animate
+  @media #{$medium-up}
     .columns
-      +anim-end
+      +anim-start
+    &.animate
+      .columns
+        +anim-end
 
 //    h o v e r     b t n     a n i m
 

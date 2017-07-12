@@ -11,6 +11,7 @@ $document.ready ->
   setTimeout(
     ->
       btn_holder.addClass('show-btn')
+      body.addClass('ready')
     2000
     )
 

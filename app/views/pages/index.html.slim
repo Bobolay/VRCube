@@ -17,6 +17,8 @@
         .img-container style="background-image: url(#{asset_path('photo/slider-2.jpg')})"
       li
         .img-container style="background-image: url(#{asset_path('photo/slider-3.jpg')})"
+      li
+        .img-container style="background-image: url(#{asset_path('photo/slider-4.jpg')})"
 
   .slide-description
 
@@ -35,6 +37,11 @@
       p.game
         span гра
         | zero hour
+    .inner-text
+      p.large-title Бажаєте відкласти пару цеглинок? Приходьте у нас клюб і погрузіться в атмосферу жаху та ненависті.
+      p.game
+        span гра
+        | bracket factory
 
     .slide-btns.clearfix
       .slider-prev.floated
@@ -57,7 +64,7 @@
         span немає меж реальності.
     .columns.medium-5.medium-push-1.large-4.float-left
       .img.slide-up
-        .img-bg style="background-image: url(#{asset_path('photo/slider-1.jpg')})"
+        .img-bg style="background-image: url(#{asset_path('photo/photo-2.jpg')})"
 
 .row.section-indent
   .columns.large-9.large-push-3.slide-up
@@ -65,7 +72,8 @@
       p.section-title.larger.centered data-text="vrcube"
         | vr
         span cube
-      .corner-btn.square = inline_svg "icons/play.svg"
+      a.corner-btn.square.video-popup href="https://www.youtube.com/watch?v=FfLjKkGhIfs&rel=0"
+        = inline_svg "icons/play.svg"
 
   .columns.medium-6.slide-up
     p.section-subtitle

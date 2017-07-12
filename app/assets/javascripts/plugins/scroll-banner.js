@@ -30,7 +30,7 @@ scroll_home_banner = function(top) {
 }
 
 $('.read-more').on("click", function(){
-    var $slider = $(".banner-wrap:first")
+    var $slider = $(".banner-holder:first")
     var slider_height = $slider.first().height()
     var $next_section = $slider.next()
     var next_section_top = $next_section.offset().top
@@ -42,7 +42,7 @@ $("body").on("wheel", function(e){
     if(e && e.ctrlKey) {
         return true
     }
-    var $slider = $(".banner-wrap:first")
+    var $slider = $(".banner-holder:first")
     if($slider.length == 0){
         return;
     }

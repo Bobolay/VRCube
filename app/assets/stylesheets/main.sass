@@ -17,6 +17,9 @@
     top: -30px
     bottom: -30px
     padding-top: 0
+  @media screen and (min-width: 1920px)
+    top: -50px
+    bottom: -50px
   .inner-text
     padding: 20px
     position: absolute
@@ -71,7 +74,8 @@
         +centered-inside
         +transition(.5s)
       &:hover
-        background: white
+        animation: hover-btn-squared 0.7s
+        background: rgba(white,1)
         .hover-text
           opacity: 1
       &:nth-child(1)

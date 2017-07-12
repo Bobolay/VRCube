@@ -111,9 +111,10 @@
     position: relative
     margin-bottom: 20px
     margin-left: 20px
-    cursor: initial
     @media #{$xxlarge-up}
-      margin-bottom: 16px
+      margin-bottom: 15px
+    @media screen and (min-width: 1920px)
+      margin-bottom: 5px
 
 .section-title
   position: relative
@@ -125,8 +126,9 @@
   margin-bottom: 20px
   span
     color: $dark
-    &:before
-      // content: '\00A0'
+  @media screen and (min-width: 1920px)
+    font-size: 56px
+    margin-bottom: 10px
   &.larger
     +font-size(24px,56px,72px)
   &:before, &:after

@@ -14,6 +14,8 @@ body
     bottom: 0
     opacity: 0.15
     background: url(#{asset_path('photo/background-lines.png')})
+    +transition(transform 1s cubic-bezier(0.895, 0.03, 0.685, 0.22))
+    +scale(0)
   &:after
     content: ''
     display: block
@@ -22,11 +24,18 @@ body
     left: 0
     right: 0
     bottom: 0
-    opacity: 0.25
     background-image: radial-gradient(ellipse at center, #183573, #141530 70%)
     z-index: -1
+    opacity: 0
+    +transition(opacity 1s)
+    +transition-delay(2s)
   &.hidden
     overflow: hidden
+  &.ready
+    &:before
+      +scale(1)
+    &:after
+      opacity: .25
 
 @each $header, $font-size in (h1: 28px, h2: 24px, h3: 22px, h4: 20px, h5: 18px, h6: 16px)
   #{$header}, .#{$header}

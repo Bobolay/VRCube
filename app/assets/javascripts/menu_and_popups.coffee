@@ -41,3 +41,6 @@ $document.on 'click', '.top-btn', ->
     $('.address-input').addClass('visible')
   else
     $('.address-input').removeClass('visible')
+
+$document.ready ->
+  $("a.video-popup").YouTubePopUp()

@@ -1,3 +1,5 @@
+.banner-holder
+  overflow: hidden
 .banner-wrap
   position: relative
   height: 100vh
@@ -17,7 +19,7 @@
       pointer-events: none
   .main-img-holder
     position: relative
-    z-index: 5
+    z-index: 11
   .main-photo
     position: relative
     height: 80vh
@@ -41,6 +43,8 @@
       letter-spacing: 5px
       @media #{$medium-only}
         font-size: 16px
+      @media screen and (min-width: 1920px)
+        font-size: 16px
     .header-holder
       display: inline-block
     h1
@@ -50,7 +54,8 @@
       font-weight: 700
       text-transform: uppercase
       letter-spacing: 10px
-      margin: 50px 0 20px
+      margin: 20px 0
+      line-height: 1
       span
         color: $dark
       &:before, &:after
@@ -77,6 +82,8 @@
         margin: 10px 0
       @media #{$xxlarge-up}
         font-size: 125px
+      @media screen and (min-width: 1920px)
+        font-size: 150px
     @media #{$large-up}
       text-align: left
       width: initial
@@ -89,6 +96,8 @@
         font-size: 20px
       @media #{$large-up}
         text-align: right
+      @media screen and (min-width: 1920px)
+        font-size: 20px
     .order-btn-holder
       display: inline-block
       position: relative

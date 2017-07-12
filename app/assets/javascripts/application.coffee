@@ -18,6 +18,7 @@
 #= require plugins/jquery.timepicker.min
 #= require plugins/jquery.nice-select.min
 #= require plugins/scroll-banner
+#= require plugins/YouTubePopUp.jquery
 
 #     I N I T I A L I Z E
 

@@ -1,37 +1,38 @@
-.banner-wrap
+.banner-holder
 
-  .row
-    .columns.large-5.main-img-holder
-      .main-photo style="background-image: url(#{asset_path('photo/banner-photo.jpg')})"
-    .columns.large-6
-      .banner-text
-        p.small
-          | Перший у Львові
-        .header-holder
-          h1
-            | vr
-            span cube
-          p.subheader
-            | майбутнє вже поруч
+  .banner-wrap
+    .row
+      .columns.large-5.main-img-holder
+        .main-photo style="background-image: url(#{asset_path('photo/banner-photo.jpg')})"
+      .columns.large-6
+        .banner-text
+          p.small
+            | Перший у Львові
+          .header-holder
+            h1
+              | vr
+              span cube
+            p.subheader
+              | майбутнє вже поруч
 
-        .contact-us-field
-          .order-btn-holder
-            .order-btn.reserve-btn title="Забронювати гру"
-              | бронювання
-              = inline_svg "icons/calendar"
-          a.contact-phone title="Подзвонити нам" href="tel:0679931074"
-            span 067
-            | 993-10-74
+          .contact-us-field
+            .order-btn-holder
+              .order-btn.reserve-btn title="Забронювати гру"
+                | бронювання
+                = inline_svg "icons/calendar"
+            a.contact-phone title="Подзвонити нам" href="tel:0679931074"
+              span 067
+              | 993-10-74
 
-  ul.socials
-    li
-      a title="Відвідати нас в соцмережі" href="https://www.facebook.com/VRcubelviv" = inline_svg "icons/social-fb.svg"
-    li
-      a title="Відвідати нас в соцмережі" href="https://www.instagram.com/vr_cube_lviv" = inline_svg "icons/social-instagram.svg"
-    li
-      a title="Відвідати нас в соцмережі" href="https://twitter.com/vr_lviv" = inline_svg "icons/social-tw.svg"
+    ul.socials
+      li
+        a title="Відвідати нас в соцмережі" href="https://www.facebook.com/VRcubelviv" = inline_svg "icons/social-fb.svg"
+      li
+        a title="Відвідати нас в соцмережі" href="https://www.instagram.com/vr_cube_lviv" = inline_svg "icons/social-instagram.svg"
+      li
+        a title="Відвідати нас в соцмережі" href="https://twitter.com/vr_lviv" = inline_svg "icons/social-tw.svg"
 
-  .read-more title="Дізнатись про нас більше"
-    p
-      | детальніше
-    = inline_svg "icons/arrow-more-main-banner.svg"
+    .read-more title="Дізнатись про нас більше"
+      p
+        | детальніше
+      = inline_svg "icons/arrow-more-main-banner.svg"
