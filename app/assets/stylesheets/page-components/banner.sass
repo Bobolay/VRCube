@@ -181,6 +181,14 @@
       width: 34px
       text-align: center
       display: inline-block
+      a
+        display: block
+        line-height: 0
+        width: 18px
+        height: 18px
+      &:hover
+        a
+          +scale(1.25)
       @media #{$medium-only}
         padding: 20px
         width: 64px
