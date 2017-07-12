@@ -248,14 +248,20 @@
       display: none
   .inner-text
     width: 600px
+    .large-title
+      line-height: 1.2
     @media #{$small-only}
       padding: 50px 20px 30px
       max-width: 100%
       .large-title, .regular
         margin-bottom: 30px
+      .large-title
+        font-size: 30px
     @media #{$medium-up}
       opacity: 0
       +transition(opacity .25s)
+      .large-title
+        font-size: 36px
     @media #{$medium-only}
       padding: 50px 100px 0
       .large-title, .regular
@@ -381,7 +387,7 @@
           fill: $red
         @media #{$small-only}
           display: none
-      @media #{$large-up}
+      @media #{$medium-up}
         margin-left: 50px
         vertical-align: bottom
     @media #{$small-only}
