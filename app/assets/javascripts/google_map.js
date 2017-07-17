@@ -166,8 +166,8 @@ function initialize() {
   
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-  var xCordinate = 49.8076933
-  var yCordinate = 23.9966193
+  var xCordinate = 49.806156
+  var yCordinate = 23.997832
 
   if (w > 640){
     zoomZoom = 16;
@@ -210,8 +210,8 @@ function initialize() {
                   '<p>vr<span>cube</span></p>'+
                 '</div>'+
                 '<div class="iw-address">'+
-                  '<p>вул. Княгині Ольги 114</p>'+
-                  '<p>Львів, Україна</p><span>будівля “Аквапарку”</span>'+
+                  '<p>вул. Княгині Ольги, 114</p>'+
+                  '<p>Львів, Україна</p><span>будівля Аквапарку “Пляж”</span>'+
                 '</div>'
   }).open();
 
