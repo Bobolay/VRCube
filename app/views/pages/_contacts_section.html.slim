@@ -1,0 +1,35 @@
+.contact-wrap
+  .img-bg style="background-image: url(#{asset_path('photo/background-photo-bottom.png')})"
+  .row
+    .columns.large-10.large-centered
+      .section-holder.slide-up
+        p.contact-subtitle
+          | Не гайте часу, завітайте у
+        p.section-title.larger data-text="vrcube"
+          | vr
+          span cube
+        p.address.map-btn
+          = inline_svg "icons/location.svg"
+          | вул. Княгині Ольги, 114
+          span будівля Аквапарку "Пляж"
+
+      .row
+        .columns.medium-10.large-8
+          form.contact-form.call-me-form.slide-up action="/call-me"
+            p.regular
+              | Внесіть дані і ми Вам перетелефонуємо
+              span = inline_svg "icons/mail.svg"
+            .input-field
+              input placeholder="Ваше ім'я" name="call_request[name]" type="text"
+            .input-field
+              input placeholder="Контактний телефон" name="call_request[phone]" type="text"
+            button.corner-btn.wide
+              p
+                | замовити
+            p.regular
+              | Або бронюйте за телефоном
+              span = inline_svg "icons/phone.svg"
+            a.large href="tel:0679931074"
+              | 067 993-10-74
+
+            .form-img style="background-image: url(#{asset_path('photo/person-form.png')})"

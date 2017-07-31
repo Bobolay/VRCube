@@ -17,6 +17,18 @@ $document.ready ->
         ,
         time:
           required: true
+      submitHandler: (form)->
+        $form = $(form)
+        url = $form.attr("action")
+        alert("thanks")
+
+        $.ajax({
+          url: url
+          type: "post"
+          data: $form.serialize()
+        })
+
+        false
     })
   )
 

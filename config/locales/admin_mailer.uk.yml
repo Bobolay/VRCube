@@ -1,0 +1,25 @@
+uk:
+  admin_mailer:
+    new_call_request:
+      title: "Новий запит передзвонити"
+      admin-links:
+        event_request: "Запит в адмін-панелі"
+    new_home_order:
+      title: "Нове замовлення додому"
+      admin-links:
+        event_request: "Замовлення в адмін-панелі"
+    new_session_order:
+      title: "Нове замовлення сеансу"
+      admin-links:
+        event_request: "Замовлення в адмін-панелі"
+
+
+    attributes:
+      address: "Адреса"
+      name: "Ім'я"
+      phone: "Телефон"
+      datetime: "Дата і час"
+      players_count: "Кількість гравців"
+      duration: "Тривалість сеансу"
+      created_at: "Дата/час надсилання запиту"
+

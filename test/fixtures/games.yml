@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  youtube_video_id: MyString
+  published: false
+  sorting_position: 1
+
+two:
+  title: MyString
+  youtube_video_id: MyString
+  published: false
+  sorting_position: 1

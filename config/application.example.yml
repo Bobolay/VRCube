@@ -1,0 +1,41 @@
+# ========================
+# SMTP SERVER
+# ========================
+smtp_server: "smtp.gmail.com"
+smtp_gmail_user_name: "user_email"
+smtp_gmail_domain: "domain"
+smtp_gmail_password: "user_password"
+smtp_default_from: "user@server"
+
+# ========================
+# HOST
+# ========================
+development.host: "localhost:3000"
+
+# ========================
+# TINYPNG
+# ========================
+tinypng_key: "YOUR_KEY"
+
+# ========================
+# DATABASE
+# ========================
+default_adapter: "*postgres"
+database: "database_name"
+postgres_user: "USER"
+postgres_password: "PASSWORD"
+# ========================
+# DEVISE
+# ========================
+devise_secret_key: 'KEY'
+
+# ========================
+# SECRET_KEY
+# ========================
+SECRET_KEY_BASE:
+
+# ========================
+# GOOGLE MAPS
+# ========================
+GOOGLE_MAPS_API_KEY: "google_maps_api_key"
+file_editor_base_dir: "config"

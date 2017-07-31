@@ -45,22 +45,28 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'slim-rails'
+gem 'slim-rails', '3.1.1'
 
 gem 'bower-rails'
 
 gem "protected_attributes"
 
-# gem 'rails_admin'
-# gem 'rails_admin_nestable'
+gem 'rails_admin'
+gem 'rails_admin_nestable'
 
-# gem 'devise'
+gem 'devise'
+gem "devise-i18n"
+gem 'i18n-active_record',
+    github: 'svenfuchs/i18n-active_record',
+    require: 'i18n/active_record'
+
+gem 'rails-i18n'
 
 gem 'enumerize'
 
-# gem 'ckeditor'
+gem 'ckeditor'
 
-# gem 'paperclip'
+gem 'paperclip'
 
 gem 'acts-as-taggable-on'
 #gem 'rails_admin_tag_list'
@@ -78,19 +84,29 @@ gem 'quiet_assets'
 
 gem 'kaminari'
 
-# gem "htmlcompressor"
-# gem 'rack-page_caching'
+gem "htmlcompressor"
+gem 'rack-page_caching'
 
 #gem 'paperclip-optimizer'
 
 #gem 'attachable', github: "VoroninNick/attachable"
-#gem 'attachable', path:"/media/data/pasha/gems/attachable"
-#gem 'cms', path: "/media/data/pasha/gems/cms"
 
-# gem 'cms', github: "pkorenev/cms"
+gem 'cms', github: "pkorenev/cms"
 
 # gem 'require_reloader'
 
-gem 'thin'
-
 gem 'puma'
+
+gem 'russian'
+gem 'globalize'
+gem 'rails_admin_globalize_field'
+
+gem 'pg'
+
+gem 'ace-rails-ap'
+
+gem 'figaro'
+
+gem 'route_translator'
+
+gem 'yaml_db'

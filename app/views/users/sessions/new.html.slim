@@ -1,0 +1,32 @@
+.contact-wrap
+  .img-bg style="background-image: url(#{asset_path('photo/background-photo-bottom.png')})"
+  .row
+    .columns.large-10.large-centered
+      .section-holder.slide-up.animate
+        p.contact-subtitle
+          | Не гайте часу, завітайте у
+        p.section-title.larger data-text="vrcube"
+          | vr
+          span cube
+        p.address.map-btn
+          = inline_svg "icons/location.svg"
+          | вул. Княгині Ольги, 114
+          span будівля Аквапарку "Пляж"
+
+      .row
+        .columns.medium-10.large-8
+          /form.contact-form.slide-up.animate
+          = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "contact-form slide-up animate"})
+            p.regular
+              | Будь ласка, авторизуйтесь
+              span = inline_svg "icons/mail.svg"
+            .input-field
+              input placeholder="Email" name="user[email]" type="email"
+            .input-field
+              input placeholder="Пароль" name="user[password]" type="password"
+            button.corner-btn.wide type="submit"
+              p
+                | увійти
+
+
+            .form-img style="background-image: url(#{asset_path('photo/person-form.png')})"

@@ -1,0 +1,22 @@
+.games-wrap.section-indent
+  .row.columns-left.fade-in-childrens
+    .columns.medium-6.large-4
+      .size-adjuster.with-title
+        .inner-text
+          p.section-title.larger.centered data-text="vr ігри"
+            | vr
+            span &nbsp;ігри
+    - @games.each do |game|
+      .columns.medium-6.large-4
+        .size-adjuster.video-wrap
+          .inner-text
+            p.large-title
+              = game.title
+            - if game.tags.any?
+              ul.genres
+                - game.tags.each do |tag|
+                  li
+                    = tag.name
+          - if game.youtube_video_id.present?
+            .video
+              iframe width="1280" height="720" src="https://www.youtube.com/embed/#{game.youtube_video_id}" frameborder="0" allowfullscreen=""

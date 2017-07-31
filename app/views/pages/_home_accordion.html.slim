@@ -1,0 +1,16 @@
+.accordion-wrap.slide-up
+  .acordion-container
+    - @accordion_slides.each_with_index do |slide, i|
+      .inner class=("active" if i == 0)
+        p.label
+          = slide.label
+        .img-holder style="background-image: url(#{slide.image.url})"
+        .inner-text
+          p.large-title
+            = slide.title
+          p.regular
+            = slide.short_description
+          .corner-btn.wide.reserve-btn
+            p
+              | бронювання
+              span = inline_svg "icons/calendar.svg"

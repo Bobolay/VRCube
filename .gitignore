@@ -18,6 +18,14 @@
 
 public
 db/schema.rb
+db/data.yml
 vendor/assets/bower_components
+vendor/assets/bower.json
+vendor/assets/.bowerrc
 .idea
 tmp
+
+config/application.yml
+config/social_keys.yml
+
+Gemfile.lock
