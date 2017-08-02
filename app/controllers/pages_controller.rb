@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   before_action :set_page_instance, except: [:index]
 
+  caches_page :index
+
   def index
     @games = Game.published.includes(:tags)
     @accordion_slides = AccordionSlide.published
