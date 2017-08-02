@@ -32,15 +32,21 @@ $document.on 'click', '.close-popup', ->
     500
   )
 
+
 $document.on 'click', '.top-btn', ->
 
   btn = $(this)
   btn.parent().children().removeClass('active')
   btn.addClass('active')
+  $form = btn.closest("form")
+
   if btn.hasClass('show-address')
     $('.address-input').addClass('visible')
+    $form.attr("action", $form.attr("data-home-order-url"))
   else
     $('.address-input').removeClass('visible')
+    $form.attr("action", $form.attr("data-session-order-url"))
+
 
 $document.ready ->
   $("a.video-popup").YouTubePopUp()

@@ -13,7 +13,11 @@ class FormsController < ApplicationController
   alias_method :home_order, :basic_request
 
   def request_params
-    h = params[action_name]
+    params_key = action_name
+    if action_name.to_s.in?(["session_order", "home_order"])
+      params_key = "order"
+    end
+    h = params[params_key]
     return {} if h.nil?
     if h["date"] && h["time"]
       h["datetime"] = DateTime.strptime("#{h["date"]} #{h["time"]}", "%d.%m.%Y %H:%M")

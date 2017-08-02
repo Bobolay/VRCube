@@ -1,34 +1,37 @@
+submit_form = (form, e)->
+  if e && e.preventDefault
+    e.preventDefault()
+  $form = $(form)
+  url = $form.attr("action")
+  console.log "form action: ", url
+  alert("thanks")
+
+  $.ajax({
+    url: url
+    type: "post"
+    data: $form.serialize()
+  })
+
+  false
+
 $document.ready ->
 
-  $("form").each(->
+  $("form.call-me-form").each(->
 
     $(this).validate({
       rules:
         name:
           required: true,
           minlength: 3
-        ,
         phone:
           required: true,
           minlength: 10
-        ,
-        date:
-          required: true
-        ,
-        time:
-          required: true
-      submitHandler: (form)->
-        $form = $(form)
-        url = $form.attr("action")
-        alert("thanks")
 
-        $.ajax({
-          url: url
-          type: "post"
-          data: $form.serialize()
-        })
+      submitHandler: submit_form
 
-        false
     })
   )
 
+
+$document.on "submit", "form.reservation-form", (e)->
+  submit_form($(this), e)

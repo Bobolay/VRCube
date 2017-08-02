@@ -7,7 +7,7 @@
   .map-container
     #googleMap
 
-  form.reservation-form
+  form.reservation-form action="/session-order" data-home-order-url="/home-order" data-session-order-url="/session-order"
 
     .top-btn-container
       .top-btn.active
@@ -23,16 +23,16 @@
               | Куди привозимо VR
               span = inline_svg "icons/location.svg"
             .input-field
-              input placeholder="Адреса" name="address" type="text"
+              input placeholder="Адреса" name="order[address]" type="text"
 
           .columns.medium-6
             p.regular
               | Контактні дані
               span = inline_svg "icons/mail.svg"
             .input-field
-              input placeholder="Ваше ім'я" name="name" type="text"
+              input placeholder="Ваше ім'я" name="order[name]" type="text"
             .input-field
-              input placeholder="Контактний телефон" name="phone" type="text"
+              input placeholder="Контактний телефон" name="order[phone]" type="text"
           .columns.medium-6
             p.regular
               | Час бронювання
@@ -40,7 +40,7 @@
             .input-field
               input.datepicker name="date"
             .input-field
-              input.timepicker placeholder="Оберіть час" name="time"
+              input.timepicker placeholder="Оберіть час" name="order[time]"
 
           .columns.medium-8
             p.regular
@@ -54,23 +54,24 @@
                 li
                 li
               ul.players-qnty
+                -
                 li
-                  input#q-option type="radio" name="players-qnty" checked=""
+                  input#q-option value="1" type="radio" name="order[players_count]" checked="checked"
                   label for="q-option"
                 li
-                  input#w-option type="radio" name="players-qnty"
+                  input#w-option value="2" type="radio" name="order[players_count]"
                   label for="w-option"
                 li
-                  input#e-option type="radio" name="players-qnty"
+                  input#e-option value="3" type="radio" name="order[players_count]"
                   label for="e-option"
                 li
-                  input#r-option type="radio" name="players-qnty"
+                  input#r-option value="4" type="radio" name="order[players_count]"
                   label for="r-option"
                 li
-                  input#t-option type="radio" name="players-qnty"
+                  input#t-option value="5" type="radio" name="order[players_count]"
                   label for="t-option"
                 li
-                  input#y-option type="radio" name="players-qnty"
+                  input#y-option value="6" type="radio" name="order[players_count]"
                   label for="y-option"
 
           .columns.medium-3
@@ -78,13 +79,13 @@
               | Тривалість суансу
               span = inline_svg "icons/form-time.svg"
             .select-aligner
-              select.nice-select name="duration"
-                option value="" data-display="30 ХВ" 30 ХВ
-                option value="1" 1 ГОД
-                option value="2" 1.5 ГОД
-                option value="3" 2 ГОД
+              select.nice-select name="order[duration]"
+                option value="0.5h" selected="selected" data-display="30 ХВ" 30 ХВ
+                option value="1h" 1 ГОД
+                option value="1.5h" 1.5 ГОД
+                option value="2h" 2 ГОД
 
-    button.reserve-btn
+    button.reserve-btn type="submit"
       p.large
         | бронювання
         span = inline_svg "icons/calendar.svg"
