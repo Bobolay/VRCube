@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     post "home-order", as: :home_order, action: :home_order
   end
 
+  mount Cms::Engine => '/'
+
   root as: "root_without_locale", to: "application#root_without_locale"
   get "robots", to: "cms/robots#robots_txt", as: :robots_txt, format: "txt"
   get "admin(/*admin_path)", to: redirect{|params| "/#{ I18n.default_locale}/admin/#{params[:admin_path]}"}
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
     mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   end
 
-  mount Cms::Engine => '/'
+
 
   mount Ckeditor::Engine => '/ckeditor'
 
