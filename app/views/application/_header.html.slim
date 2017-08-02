@@ -1,5 +1,10 @@
 nav
   a.logo href=root_path title="Вверх сторінки" = inline_svg "icons/logo.svg"
+  .languages-bar
+    - other_locales = Cms.config.provided_locales.select{|l| l.to_s != I18n.locale.to_s }
+    - other_locales.each do |locale|
+      a href="/#{locale}"
+        = locale
 
   ul.right-part
     li
