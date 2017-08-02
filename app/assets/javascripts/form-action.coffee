@@ -4,7 +4,14 @@ submit_form = (form, e)->
   $form = $(form)
   url = $form.attr("action")
   console.log "form action: ", url
-  alert("thanks")
+
+  $('button.reserve-btn, button.corner-btn').addClass('success')
+  setTimeout(
+    ->
+      $('button.reserve-btn, button.corner-btn').removeClass('success')
+      $(form).find('input').val('')
+    3000
+  )
 
   $.ajax({
     url: url
@@ -16,7 +23,7 @@ submit_form = (form, e)->
 
 $document.ready ->
 
-  $("form.call-me-form").each(->
+  $("form.call-me-form, form.reservation-form").each(->
 
     $(this).validate({
       rules:

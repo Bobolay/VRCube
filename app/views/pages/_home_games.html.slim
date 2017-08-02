@@ -3,9 +3,9 @@
     .columns.medium-6.large-4
       .size-adjuster.with-title
         .inner-text
-          p.section-title.larger.centered data-text="vr ігри"
-            | vr
-            span &nbsp;ігри
+          p.section-title.larger.centered data-text=I18n.t("main.games_title.data_text")
+            = t("main.games_title.text_1")
+            span = t("main.games_title.text_2")
     - @games.each do |game|
       .columns.medium-6.large-4
         .size-adjuster.video-wrap

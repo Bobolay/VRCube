@@ -4,30 +4,30 @@
     .columns.large-10.large-centered
       .section-holder.slide-up
         p.contact-subtitle
-          | Не гайте часу, завітайте у
+          = t("contacts.subtitle")
         p.section-title.larger data-text="vrcube"
           | vr
           span cube
         p.address.map-btn
           = inline_svg "icons/location.svg"
-          | вул. Княгині Ольги, 114
-          span будівля Аквапарку "Пляж"
+          = t("contacts.address.text_1")
+          = raw t("contacts.address.text_2")
 
       .row
         .columns.medium-10.large-8
           form.contact-form.call-me-form.slide-up action="/call-me"
-            p.regular
-              | Внесіть дані і ми Вам перетелефонуємо
+            p.regular = t("contacts.contact_form.title")
               span = inline_svg "icons/mail.svg"
             .input-field
-              input placeholder="Ваше ім'я" name="call_request[name]" type="text"
+              input placeholder=I18n.t("components.form_placeholders.name") name="name" type="text"
             .input-field
-              input placeholder="Контактний телефон" name="call_request[phone]" type="text"
+              input placeholder=I18n.t("components.form_placeholders.phone") name="phone" type="text"
             button.corner-btn.wide
-              p
-                | замовити
+              p = t("contacts.contact_form.btn")
+            p.larger
+              = t("contacts.contact_form.success_message")
             p.regular
-              | Або бронюйте за телефоном
+              = t("contacts.contact_form.reserve_by_phone")
               span = inline_svg "icons/phone.svg"
             a.large href="tel:0679931074"
               | 067 993-10-74

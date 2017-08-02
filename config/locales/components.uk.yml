@@ -1,0 +1,33 @@
+uk:
+  components:
+    html_titles:
+      social: "Відвідати нас в соцмережі"
+      read_more: "Дізнатись про нас більше"
+      reserve_btn: "Забронювати гру"
+      call_us: "Подзвонити нам"
+    read_more: "детальніше"
+    reserve_btn: "Бронювання"
+    close_btn: "закрити"
+    popup:
+      tab_1: "замовлення сеансу"
+      tab_2: "замовити vr на дім"
+      delivery_address: "Куди привозимо VR"
+    form_labels:
+      info: "Контактні дані"
+      time: "Час бронювання"
+      qnty: "Кількість гравців"
+      duration: "Тривалість суансу"
+    form_placeholders:
+      address: "Адреса"
+      name: "Ваше ім'я"
+      phone: "Контактний телефон"
+      date: "Оберіть дату"
+      time: "Оберіть час"
+    time_options:
+      value_1: "30 ХВ"
+      value_2: "1 ГОД"
+      value_3: "1.5 ГОД"
+      value_4: "2 ГОД"
+    success_message:
+      text_1: "Успішно заброньовано!"
+      text_2: "Менеджер зв'яжеться з Вами"

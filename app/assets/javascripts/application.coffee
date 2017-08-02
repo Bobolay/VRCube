@@ -33,5 +33,5 @@
 #= require play-video
 #= require timepick
 #= require niceselect
-#= require validate
+#= require form-action
 #= require animations

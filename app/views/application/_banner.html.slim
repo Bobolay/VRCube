@@ -7,32 +7,29 @@
       .columns.large-6
         .banner-text
           p.small
-            | Перший у Львові
+            = t("banner.text_1")
           .header-holder
-            h1
-              | vr
-              span cube
+            = raw t("banner.text_2")
             p.subheader
-              | майбутнє вже поруч
+              = t("banner.text_3")
 
           .contact-us-field
             .order-btn-holder
-              .order-btn.reserve-btn title="Забронювати гру"
-                | бронювання
+              .order-btn.reserve-btn title=I18n.t("components.html_titles.reserve_btn")
+                = t("components.reserve_btn")
                 = inline_svg "icons/calendar"
-            a.contact-phone title="Подзвонити нам" href="tel:0679931074"
+            a.contact-phone title=I18n.t("components.html_titles.call_us") href="tel:0679931074"
               span 067
               | 993-10-74
 
     ul.socials
       li
-        a title="Відвідати нас в соцмережі" href="https://www.facebook.com/VRcubelviv" = inline_svg "icons/social-fb.svg"
+        a title=I18n.t("components.html_titles.social") href="https://www.facebook.com/VRcubelviv" = inline_svg "icons/social-fb.svg"
       li
-        a title="Відвідати нас в соцмережі" href="https://www.instagram.com/vr_cube_lviv" = inline_svg "icons/social-instagram.svg"
+        a title=I18n.t("components.html_titles.social") href="https://www.instagram.com/vr_cube_lviv" = inline_svg "icons/social-instagram.svg"
       li
-        a title="Відвідати нас в соцмережі" href="https://twitter.com/vr_lviv" = inline_svg "icons/social-tw.svg"
+        a title=I18n.t("components.html_titles.social") href="https://twitter.com/vr_lviv" = inline_svg "icons/social-tw.svg"
 
-    .read-more title="Дізнатись про нас більше"
-      p
-        | детальніше
+    .read-more title=I18n.t("components.html_titles.read_more")
+      p = t("components.read_more")
       = inline_svg "icons/arrow-more-main-banner.svg"

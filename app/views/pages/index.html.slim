@@ -2,12 +2,12 @@
 
 .row.section-indent.slide-up
   .columns
-    p.section-title data-text="технологія vr"
-      | технологія
-      span &nbsp;vr
+    p.section-title data-text=I18n.t("main.about_technology.data_text")
+      = t("main.about_technology.title.text_1")
+      span = t("main.about_technology.title.text_2")
     p.section-subtitle
-      | Нова технологія безконтактної інформаційної взаємодії
-      
+      = t("main.about_technology.subtitle")
+
 .slider-wrap.slide-up
   .slide-img
     ul.games-slider
@@ -23,34 +23,34 @@
   .slide-description
 
     .inner-text
-      p.large-title Ви коли-небудь мріяли ступити крок на краєчок Великого Каньйону в Арізоні?
+      p.large-title = t("main.game_1.description")
       p.game
-        span гра
-        | inmaps
+        span = t("main.title_for_game")
+        = t("main.game_1.name")
     .inner-text
-      p.large-title Досліджуйте космос з командою друзів, виконуйте фантастичні командні завдання.
+      p.large-title = t("main.game_2.description")
       p.game
-        span гра
-        | star track
+        span = t("main.title_for_game")
+        = t("main.game_2.name")
     .inner-text
-      p.large-title Хочете переконатися, чи вистачить сміливості поринути в апокаліптичний світ, переповнений зомбі?
+      p.large-title = t("main.game_3.description")
       p.game
-        span гра
-        | arizona sunshine
+        span = t("main.title_for_game")
+        = t("main.game_3.name")
     .inner-text
-      p.large-title Стати частиною заворожуючого підводного світу, якого ще не бачили.
+      p.large-title = t("main.game_4.description")
       p.game
-        span гра
-        | theblu: encounter
+        span = t("main.title_for_game")
+        = t("main.game_4.name")
 
     .slide-btns.clearfix
       .slider-prev.floated
         .hover-text
-          | Cюди
+          = t("main.slider_arrows.prev")
         = inline_svg ('icons/arrow-slider-left')
       .slider-next.floated
         .hover-text
-          | Туди
+          = t("main.slider_arrows.next")
         = inline_svg ('icons/arrow-slider-right')
 
 .virtual-reality-wrap
@@ -58,10 +58,8 @@
   .row
     .columns.medium-6.float-right.slide-up
       p.large-title
-        | Сьогодні це можливо за допомогою технологій віртуальної реальності
-      p.regular
-        | Віртуальна реальність – це технологія, з допомогою якої ви зможете поринути у світ, де
-        span немає меж реальності.
+        = t("main.virtual_reality.text_1")
+      = raw t("main.virtual_reality.text_2")
     .columns.medium-5.medium-push-1.large-4.float-left
       .img.slide-up
         .img-bg style="background-image: url(#{asset_path('photo/photo-2.jpg')})"
@@ -76,11 +74,7 @@
         = inline_svg "icons/play.svg"
 
   .columns.medium-6.slide-up
-    p.section-subtitle
-      |&mdash; справжні
-      span VR
-      |технології та інфраструктура, створена для задоволення і розваг, де кожний знайде щось
-      span для себе.
+    = raw t("main.video_subtitle")
 
 = render "home_accordion"
 = render "home_games"

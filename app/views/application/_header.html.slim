@@ -1,24 +1,21 @@
 nav
-  a.logo href=root_path title="Вверх сторінки" = inline_svg "icons/logo.svg"
-  .languages-bar
-    - other_locales = Cms.config.provided_locales.select{|l| l.to_s != I18n.locale.to_s }
-    - other_locales.each do |locale|
-      a href="/#{locale}"
-        = locale
+  a.logo href=root_path title=I18n.t("header.titles.main_page")
+    = inline_svg "icons/logo.svg"
 
   ul.right-part
     li
-      a.contact-phone title="Подзвонити нам" href="tel:0679931074"
+      a.contact-phone title=I18n.t("header.titles.call_us") href="tel:0679931074"
         span 067
         | 993-10-74
     li
-      .corner-btn.square.reserve-btn title="Забронювати гру"
-        p забронювати
+      .corner-btn.square.reserve-btn title=I18n.t("header.titles.order_game")
+        p = t('header.reserve')
         = inline_svg "icons/calendar"
     li
-      .corner-btn.square.map-btn title="Вікдрити карту" = inline_svg "icons/location.svg"
-    / li
-      .corner-btn.square.toggle-language title="Змінити мову"
-        p en
-    / li
-      .corner-btn.square title="Сайт в 3D режимі" = inline_svg "icons/3d.svg"
+      .corner-btn.square.map-btn title=I18n.t("header.titles.open_map") = inline_svg "icons/location.svg"
+    li
+      .corner-btn.square.languages-bar title="Змінити мову"
+        - other_locales = Cms.config.provided_locales.select{|l| l.to_s != I18n.locale.to_s }
+        - other_locales.each do |locale|
+          a href="/#{locale}"
+            = locale

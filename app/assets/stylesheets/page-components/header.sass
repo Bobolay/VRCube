@@ -40,9 +40,6 @@ nav
       display: inline-block
       margin-right: 10px
       vertical-align: middle
-      &:last-child
-        @media #{$small-only}
-          // display: none
     .contact-phone
       opacity: 0
       pointer-events: none
@@ -67,7 +64,7 @@ nav
       @media #{$medium-up}
         svg
           display: none
-    .toggle-language
-      p
-        position: relative
-        left: -2px
+    .languages-bar
+      a
+        line-height: 54px
+        text-transform: uppercase

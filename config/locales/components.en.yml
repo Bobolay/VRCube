@@ -1,0 +1,9 @@
+en:
+  components:
+    html_titles:
+      social: "Visit us in socialmedia"
+      read_more: "Learn more about us"
+      reserve_btn: "Order game"
+      call_us: "Call us"
+    read_more: "read more"
+    reserve_btn: "Reserve"

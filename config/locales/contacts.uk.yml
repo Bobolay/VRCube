@@ -1,0 +1,12 @@
+uk:
+  contacts:
+    subtitle: "Не гайте часу, завітайте у"
+    address:
+      text_1: "вул. Княгині Ольги, 114"
+      text_2: |
+        <span>будівля Аквапарку "Пляж"</span>
+    contact_form:
+      title: "Внесіть дані і ми Вам перетелефонуємо"
+      btn: "Замовити"
+      success_message: "успішно замовлено"
+      reserve_by_phone: "Або бронюйте за телефоном"

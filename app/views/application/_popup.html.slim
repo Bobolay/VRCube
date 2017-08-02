@@ -1,7 +1,7 @@
 .popup-wrap.reservation
   
   .close-popup
-    p закрити
+    p = t("components.close_btn")
     = inline_svg "icons/close-icon.svg"
 
   .map-container
@@ -11,40 +11,39 @@
 
     .top-btn-container
       .top-btn.active
-        | замовлення сеансу
+        = t("components.popup.tab_1")
       .top-btn.show-address
-        | замовити vr на дім
+        = t("components.popup.tab_2")
 
     .row.form-inner
       .columns.medium-11.medium-centered.large-8
         .row
           .columns.address-input
             p.regular
-              | Куди привозимо VR
+              = t("components.popup.delivery_address")
               span = inline_svg "icons/location.svg"
             .input-field
-              input placeholder="Адреса" name="order[address]" type="text"
-
+              input placeholder=I18n.t("components.form_placeholders.address") name="order[address]" type="text"
           .columns.medium-6
             p.regular
-              | Контактні дані
+              = t("components.form_labels.info")
               span = inline_svg "icons/mail.svg"
             .input-field
-              input placeholder="Ваше ім'я" name="order[name]" type="text"
+              input placeholder=I18n.t("components.form_placeholders.name") name="name" type="text"
             .input-field
-              input placeholder="Контактний телефон" name="order[phone]" type="text"
+              input placeholder=I18n.t("components.form_placeholders.phone") name="phone" type="text"
           .columns.medium-6
             p.regular
-              | Час бронювання
+              = t("components.form_labels.time")
               span = inline_svg "icons/calendar.svg"
-            .input-field
+            .input-field placeholder=I18n.t("components.form_placeholders.date")
               input.datepicker name="order[date]"
             .input-field
-              input.timepicker placeholder="Оберіть час" name="order[time]"
+              input.timepicker placeholder=I18n.t("components.form_placeholders.time") name="order[time]"
 
           .columns.medium-8
             p.regular
-              | Кількість гравців
+              = t("components.form_labels.qnty")
               span = inline_svg "icons/form-players.svg"
             .players-qnty-container
               ul.underlay
@@ -76,16 +75,23 @@
 
           .columns.medium-3
             p.regular
-              | Тривалість суансу
+              = t("components.form_labels.duration")
               span = inline_svg "icons/form-time.svg"
             .select-aligner
               select.nice-select name="order[duration]"
-                option value="0.5h" selected="selected" data-display="30 ХВ" 30 ХВ
-                option value="1h" 1 ГОД
-                option value="1.5h" 1.5 ГОД
-                option value="2h" 2 ГОД
+                option value="0.5h" selected="selected" data-display="30 ХВ"
+                  = t("components.time_options.value_1")
+                option value="1h"
+                  = t("components.time_options.value_2")
+                option value="1.5h"
+                  = t("components.time_options.value_3")
+                option value="2h"
+                  = t("components.time_options.value_4")
 
     button.reserve-btn type="submit"
       p.large
-        | бронювання
+        = t("components.reserve_btn")
         span = inline_svg "icons/calendar.svg"
+      .success-message
+        p.main-text = t("components.success_message.text_1")
+        p.smaller = t("components.success_message.text_2")

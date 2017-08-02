@@ -1,0 +1,8 @@
+en:
+  header:
+    reserve: "Order"
+    titles:
+      main_page: "Back to main page"
+      call_us: "Call us"
+      order_game: "Order game"
+      open_map: "Open map"
