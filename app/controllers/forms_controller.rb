@@ -19,9 +19,10 @@ class FormsController < ApplicationController
     end
     h = params[params_key]
     return {} if h.nil?
-    if h["date"] && h["time"]
+    h = h.stringify_keys
+    if h["date"].present? && h["time"].present?
       h["datetime"] = DateTime.strptime("#{h["date"]} #{h["time"]}", "%d.%m.%Y %H:%M")
-    elsif h["date"]
+    elsif h["date"].present?
       h["datetime"] = DateTime.strptime("#{h["date"]}", "%d.%m.%Y")
     end
 
