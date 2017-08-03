@@ -65,7 +65,7 @@ $document.ready ->
   #console.log "computed_rules: ", computed_rules
 
 
-  $("form.contact-form, form.reservation-form").each(->
+  $("form.call-me-form, form.reservation-form").each(->
 
 
 
