@@ -212,6 +212,8 @@ module RailsAdminDynamicConfig
         config.configure_forms(:all)
         config.include_models HomeOrder, SessionOrder, CallRequest
         config.model CallRequest do
+          navigation_label_key(:feedbacks, 3)
+
           field :created_at do
             read_only true
           end
@@ -224,6 +226,7 @@ module RailsAdminDynamicConfig
         end
 
         config.model SessionOrder do
+          navigation_label_key(:feedbacks, 2)
           field :created_at do
             read_only true
           end
@@ -245,6 +248,8 @@ module RailsAdminDynamicConfig
         end
 
         config.model HomeOrder do
+          navigation_label_key(:feedbacks, 1)
+
           field :created_at do
             read_only true
           end
