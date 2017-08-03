@@ -179,6 +179,7 @@ module RailsAdminDynamicConfig
 
         config.include_models User
         config.model User do
+          navigation_label_key(:users, 1)
           field :email
           field :password
           field :password_confirmation
