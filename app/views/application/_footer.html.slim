@@ -4,9 +4,9 @@ footer
     .floated
       a target="_blank" title="Відвідати сайт розробника" href="http://voroninstudio.eu/uk" = inline_svg "icons/studio-logo.svg"
       p.regular
-        | Handcrafted in 
-        a target="_blank" title="Відвідати сайт розробника" href="http://voroninstudio.eu/uk" Voronin Design studio.
-        | 2017.
+        = raw t("footer.developed-by", year: 2017, link: content_tag(:a, t("footer.developer-name"), title: t("footer.developer-site-link-title"), target: "_blank", href: "http://voroninstudio.eu/#{I18n.locale}", rel: "nofollow"))
     .floated-right  
       p.regular
-        | &copy; 2017 &#171;VRCUBE&#187;
+        - copyright_year = 2012
+        - copyright_year_str = copyright_year == Date.today.year ? copyright_year.to_s : "#{copyright_year} &mdash; #{Date.today.year}".html_safe
+        | &copy; #{copyright_year_str} &#171;VRCUBE&#187;

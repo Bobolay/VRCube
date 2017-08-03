@@ -7,7 +7,7 @@
   .map-container
     #googleMap
 
-  form.reservation-form action="/session-order" data-home-order-url="/home-order" data-session-order-url="/session-order"
+  form.reservation-form action="/session-order" data-home-order-url="/home-order" data-session-order-url="/session-order" data-resource-name="order"
 
     .top-btn-container
       .top-btn.active
@@ -23,7 +23,7 @@
               = t("components.popup.delivery_address")
               span = inline_svg "icons/location.svg"
             .input-field
-              input placeholder=I18n.t("components.form_placeholders.address") name="order[address]" type="text"
+              input placeholder=I18n.t("components.form_placeholders.address") name="address" type="text"
           .columns.medium-6
             p.regular
               = t("components.form_labels.info")
@@ -37,9 +37,9 @@
               = t("components.form_labels.time")
               span = inline_svg "icons/calendar.svg"
             .input-field placeholder=I18n.t("components.form_placeholders.date")
-              input.datepicker name="order[date]"
+              input.datepicker name="date"
             .input-field
-              input.timepicker placeholder=I18n.t("components.form_placeholders.time") name="order[time]"
+              input.timepicker placeholder=I18n.t("components.form_placeholders.time") name="time"
 
           .columns.medium-8
             p.regular
@@ -55,22 +55,22 @@
               ul.players-qnty
                 -
                 li
-                  input#q-option value="1" type="radio" name="order[players_count]" checked="checked"
+                  input#q-option value="1" type="radio" name="players_count" checked="checked"
                   label for="q-option"
                 li
-                  input#w-option value="2" type="radio" name="order[players_count]"
+                  input#w-option value="2" type="radio" name="players_count"
                   label for="w-option"
                 li
-                  input#e-option value="3" type="radio" name="order[players_count]"
+                  input#e-option value="3" type="radio" name="players_count"
                   label for="e-option"
                 li
-                  input#r-option value="4" type="radio" name="order[players_count]"
+                  input#r-option value="4" type="radio" name="players_count"
                   label for="r-option"
                 li
-                  input#t-option value="5" type="radio" name="order[players_count]"
+                  input#t-option value="5" type="radio" name="players_count"
                   label for="t-option"
                 li
-                  input#y-option value="6" type="radio" name="order[players_count]"
+                  input#y-option value="6" type="radio" name="players_count"
                   label for="y-option"
 
           .columns.medium-3
@@ -78,7 +78,7 @@
               = t("components.form_labels.duration")
               span = inline_svg "icons/form-time.svg"
             .select-aligner
-              select.nice-select name="order[duration]"
+              select.nice-select name="duration"
                 option value="0.5h" selected="selected" data-display="30 ХВ"
                   = t("components.time_options.value_1")
                 option value="1h"

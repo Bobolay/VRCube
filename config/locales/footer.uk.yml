@@ -1,2 +1,5 @@
 uk:
-  yml:
+  footer:
+    developed-by: Handcrafted in %{link}. %{year}
+    developer-site-link-title: "Відвідати сайт розробника"
+    developer-name: Voronin Design studio

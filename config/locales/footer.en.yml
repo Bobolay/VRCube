@@ -1,2 +1,5 @@
 en:
   footer:
+    developed-by: Handcrafted in %{link}. %{year}
+    developer-site-link-title: "Visit developer's website"
+    developer-name: Voronin Design studio
