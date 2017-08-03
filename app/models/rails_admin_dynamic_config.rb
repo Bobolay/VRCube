@@ -210,6 +210,63 @@ module RailsAdminDynamicConfig
         # Requests
         # ===================================================
         config.configure_forms(:all)
+        config.include_models HomeOrder, SessionOrder, CallRequest
+        config.model CallRequest do
+          field :created_at do
+            read_only true
+          end
+          field :name do
+            read_only true
+          end
+          field :phone do
+            read_only true
+          end
+        end
+
+        config.model SessionOrder do
+          field :created_at do
+            read_only true
+          end
+          field :name do
+            read_only true
+          end
+          field :phone do
+            read_only true
+          end
+          field :datetime do
+            read_only true
+          end
+          field :players_count do
+            read_only true
+          end
+          field :duration do
+            read_only true
+          end
+        end
+
+        config.model HomeOrder do
+          field :created_at do
+            read_only true
+          end
+          field :address do
+            read_only true
+          end
+          field :name do
+            read_only true
+          end
+          field :phone do
+            read_only true
+          end
+          field :datetime do
+            read_only true
+          end
+          field :players_count do
+            read_only true
+          end
+          field :duration do
+            read_only true
+          end
+        end
 
         # ===================================================
         # Application specific models
