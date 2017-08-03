@@ -16,5 +16,5 @@ nav
     li.language
       - other_locales = Cms.config.provided_locales.select{ |l| l.to_s != I18n.locale.to_s }
       - other_locales.each do |locale|
-        a.corner-btn.square title="Змінити мову" href="/#{locale}"
+        a.corner-btn.square title=t("header.titles.change_locale") href="/#{locale}"
           = locale
