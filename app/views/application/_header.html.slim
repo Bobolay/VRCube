@@ -13,9 +13,8 @@ nav
         = inline_svg "icons/calendar"
     li
       .corner-btn.square.map-btn title=I18n.t("header.titles.open_map") = inline_svg "icons/location.svg"
-    li
-      .corner-btn.square.languages-bar title="Змінити мову"
-        - other_locales = Cms.config.provided_locales.select{|l| l.to_s != I18n.locale.to_s }
-        - other_locales.each do |locale|
-          a href="/#{locale}"
-            = locale
+    li.language
+      - other_locales = Cms.config.provided_locales.select{ |l| l.to_s != I18n.locale.to_s }
+      - other_locales.each do |locale|
+        a.corner-btn.square title="Змінити мову" href="/#{locale}"
+          = locale
