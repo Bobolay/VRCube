@@ -1,0 +1,9 @@
+uk:
+  activerecord:
+    models:
+      home_order: "Замовлення на дім"
+      session_order: "Замовлення сеансу"
+
+      form_configs/new_home_order: "Замовлення на дім"
+      form_configs/new_session_order: "Замовлення сеансу"
+      form_configs/new_call_request: "Запити передзвонити"
