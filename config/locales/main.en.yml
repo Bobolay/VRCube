@@ -1,40 +1,40 @@
 en:
   main:
     about_technology:
-      data_text: "технологія vr"
+      data_text: " TECHNOLOGY VR "
       title:
-        text_1: "технологія"
+        text_1: "technology"
         text_2: " vr"
-      subtitle: "Нова технологія безконтактної інформаційної взаємодії"
+      subtitle: "New technology of Virtual Reality"
 
-    title_for_game: "гра"
+    title_for_game: "game"
     game_1:
-      description: "Ви коли-небудь мріяли ступити крок на краєчок Великого Каньйону в Арізоні?"
+      description: "Have you ever dreamed of stepping on the edge of Grand Canyon in Arizona?"
       name: "inmaps"
     game_2:
-      description: "Досліджуйте космос з командою друзів, виконуйте фантастичні командні завдання."
+      description: "Descover space with you team friends doing difficult tasks."
       name: "star track"
     game_3:
-      description: "Хочете переконатися, чи вистачить сміливості поринути в апокаліптичний світ, переповнений зомбі?"
+      description: "Have you ever craved the urge of hunting ghosts in the dark old haunted house?"
       name: "arizona sunshine"
     game_4:
-      description: "Стати частиною заворожуючого підводного світу, якого ще не бачили."
+      description: "Would you like to Become a Part of the Underwater World That Has Never Been discovered."
       name: "theblu: encounter"
 
     slider_arrows:
-      prev: "Сюди"
-      next: "Туди"
+      prev: "here"
+      next: "there"
 
     virtual_reality:
-      text_1: "Сьогодні це можливо за допомогою технологій віртуальної реальності"
+      text_1: "Now it is absolutely possible with the Virtual Reality (VR) Technology"
       text_2: |
-        <p class="regular">Віртуальна реальність – це технологія, з допомогою якої ви зможете поринути у світ, де<span> немає меж реальності.</span></p>
+        <p class="regular">Virtual reality is a technology that you can immerse yourself in a world where there are no limits of realities.</span></p>
 
     video_subtitle: |
-      <p class="section-subtitle">&mdash; справжні<span>VR</span>технології та інфраструктура, створена для задоволення і розваг, де кожний знайде щось<span>для себе.</span></p>
+      <p class="section-subtitle">&mdash; VR Cube Club introduces real <span>VR</span> technology created <span> for your pleasure and fun </span> </p>
 
     games_title:
-      data_text: "vr ігри"
+      data_text: "vr games"
       text_1: "vr"
-      text_2: " ігри"
+      text_2: " games"
 

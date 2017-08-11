@@ -1,12 +1,12 @@
 en:
   contacts:
-    subtitle: "Не гайте часу, завітайте у"
+    subtitle: "DON’T WASTE ANY MINUTE, COME, AND VISIT US AT"
     address:
-      text_1: "вул. Княгині Ольги, 114"
+      text_1: "Knyahyni Ol’hy ST, 114"
       text_2: |
-        <span>будівля Аквапарку "Пляж"</span>
+        <span>Building of Aqua Park “Plyazh”, second floor</span>
     contact_form:
-      title: "Внесіть дані і ми Вам перетелефонуємо"
-      btn: "Замовити"
-      success_message: "успішно замовлено"
-      reserve_by_phone: "Або бронюйте за телефоном"
+      title: "Enter your information and we will call you back"
+      btn: "Book Now"
+      success_message: "Successfully ordered"
+      reserve_by_phone: "Or book now by phone"
