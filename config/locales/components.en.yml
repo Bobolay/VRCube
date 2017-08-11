@@ -7,3 +7,27 @@ en:
       call_us: "Call us"
     read_more: "read more"
     reserve_btn: "Reserve"
+    close_btn: "close"
+    popup:
+      tab_1: "замовлення сеансу"
+      tab_2: "замовити vr на дім"
+      delivery_address: "Куди привозимо VR"
+    form_labels:
+      info: "Контактні дані"
+      time: "Час бронювання"
+      qnty: "Кількість гравців"
+      duration: "Тривалість суансу"
+    form_placeholders:
+      address: "Адреса"
+      name: "Ваше ім'я"
+      phone: "Контактний телефон"
+      date: "Choose date"
+      time: "Choose time"
+    time_options:
+      value_1: "30 min"
+      value_2: "1 hour"
+      value_3: "1.5 hour"
+      value_4: "2 hour"
+    success_message:
+      text_1: "Успішно заброньовано!"
+      text_2: "Менеджер зв'яжеться з Вами"
