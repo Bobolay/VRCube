@@ -106,7 +106,7 @@ module RailsAdminDynamicConfig
 
             field :name do
               def value
-                k = @bindings[:object].type.underscore.split("/").last
+                k = (@bindings[:object].type || @bindings[:object].class.name).underscore.split("/").last
                 I18n.t("activerecord.models.pages.#{k}", raise: true) rescue k.humanize
               end
             end
