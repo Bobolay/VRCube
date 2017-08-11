@@ -93,11 +93,11 @@ module RailsAdminDynamicConfig
           navigation_label_key(:pages, 1)
           nestable_list({position_field: :sorting_position, scope: :order_by_sorting_position})
           object_label_method do
-            :custom_name
-            #{
-            #k = @bindings[:object].type.underscore.split("/").last
-            #I18n.t("activerecord.models.pages.#{k}", raise: true) rescue k.humanize
-            #}
+            #:custom_name
+            ->{
+            k = (@bindings[:object].type || @bindings[:object].class.name).underscore.split("/").last
+            I18n.t("activerecord.models.pages.#{k}", raise: true) rescue k.humanize
+            }
           end
           list do
             sort_by do
