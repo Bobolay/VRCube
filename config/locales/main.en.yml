@@ -38,3 +38,13 @@ en:
       text_1: "vr"
       text_2: " games"
 
+    prices:
+      data_text: "current prices"
+      title:
+        text_1: "current"
+        text_2: " prices"
+      subtitle: |
+        <p class="section-subtitle under-prices">Instructing how to properly use VR equipment before the game<span>is free and not included in the game time</span></p>
+      table:
+        time_attr: "min"
+        money_attr: "usd"

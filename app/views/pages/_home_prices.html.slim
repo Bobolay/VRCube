@@ -1,0 +1,62 @@
+.row.section-indent.prices-wrap
+  .columns.large-9.large-centered.slide-up
+    .section-holder
+      p.section-title.larger.centered data-text=I18n.t("main.prices.data_text")
+        = t("main.prices.title.text_1")
+        span = t("main.prices.title.text_2")
+      = raw t("main.prices.subtitle")
+
+    table
+      tr
+        th
+        th Будні
+        th Вихідні
+        th
+      tr
+        td
+          p
+            | 15
+            span = t("main.prices.table.time_attr")
+        td
+          p
+            | 30
+            span = t("main.prices.table.time_attr")
+        td
+          p
+            | 80
+            span = t("main.prices.table.time_attr")
+        td
+          .order-btn.reserve-btn title=I18n.t("components.html_titles.reserve_btn")
+            = t("components.reserve_btn")
+      tr
+        td
+          p
+            | 30
+            span = t("main.prices.table.money_attr")
+        td
+          p
+            | 110
+            span = t("main.prices.table.money_attr")
+        td
+          p
+            | 140
+            span = t("main.prices.table.money_attr")
+        td
+          .order-btn.reserve-btn title=I18n.t("components.html_titles.reserve_btn")
+            = t("components.reserve_btn")
+      tr
+        td
+          p
+            | 60
+            span = t("main.prices.table.money_attr")
+        td
+          p
+            | 200
+            span = t("main.prices.table.money_attr")
+        td
+          p
+            | 250
+            span = t("main.prices.table.money_attr")
+        td
+          .order-btn.reserve-btn title=I18n.t("components.html_titles.reserve_btn")
+            = t("components.reserve_btn")

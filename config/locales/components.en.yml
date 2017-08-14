@@ -23,7 +23,6 @@ en:
       phone: "Contact phone"
       date: "Choose a date"
       time: "Choose an hour"
-
     time_options:
       value_1: "30 min"
       value_2: "1 hour"

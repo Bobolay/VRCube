@@ -38,3 +38,13 @@ uk:
       text_1: "vr"
       text_2: " ігри"
 
+    prices:
+      data_text: "актуальні ціни"
+      title:
+        text_1: "актуальні"
+        text_2: " ціни"
+      subtitle: |
+        <p class="section-subtitle under-prices">Інструктаж як правильно користуватись VR обладнанням перед початком гри<span>є безкоштовним та не входить в ігровий час</span></p>
+      table:
+        time_attr: "хв"
+        money_attr: "грн"
