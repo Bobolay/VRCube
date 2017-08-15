@@ -24,10 +24,9 @@ en:
       date: "Choose a date"
       time: "Choose an hour"
     time_options:
-      value_1: "30 min"
-      value_2: "1 hour"
-      value_3: "1.5 hour"
-      value_4: "2 hours"
+      value_1: "15 min"
+      value_2: "30 min"
+      value_3: "1 hour"
     success_message:
       text_1: "Successfully booked!"
       text_2: "The manager will contact you"

@@ -46,5 +46,7 @@ uk:
       subtitle: |
         <p class="section-subtitle under-prices">Інструктаж як правильно користуватись VR обладнанням перед початком гри<span>є безкоштовним та не входить в ігровий час</span></p>
       table:
+        weekdays: "Будні"
+        holidays: "Вихідні"
         time_attr: "хв"
         money_attr: "грн"

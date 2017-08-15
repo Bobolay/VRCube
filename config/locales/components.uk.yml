@@ -24,10 +24,9 @@ uk:
       date: "Оберіть дату"
       time: "Оберіть час"
     time_options:
-      value_1: "30 ХВ"
-      value_2: "1 ГОД"
-      value_3: "1.5 ГОД"
-      value_4: "2 ГОД"
+      value_1: "15 хв"
+      value_2: "30 хв"
+      value_3: "1 год"
     success_message:
       text_1: "Успішно заброньовано!"
       text_2: "Менеджер зв'яжеться з Вами"
