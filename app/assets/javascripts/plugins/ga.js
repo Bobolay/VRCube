@@ -9,5 +9,6 @@
     a.src = g;
     m.parentNode.insertBefore(a, m);
 })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
-ga( 'create', 'UA-104147567-1', 'auto' );
+// ga( 'create', 'UA-104147567-1', 'auto' );
+ga( 'create', 'UA-104756132-1', 'auto' );
 ga( 'send', 'pageview' );

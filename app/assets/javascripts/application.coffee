@@ -19,6 +19,8 @@
 #= require plugins/jquery.nice-select.min
 #= require plugins/scroll-banner
 #= require plugins/YouTubePopUp.jquery
+#= require plugins/ga
+#= require plugins/jquery.scrolldepth.min
 
 #     I N I T I A L I Z E
 
@@ -35,4 +37,5 @@
 #= require niceselect
 #= require form-action
 #= require animations
-#= require ga
+#= require scrollDepth_initialize
+#= require ga-init

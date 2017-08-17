@@ -1,5 +1,13 @@
 $(document).ready ->
 
+  # GA SLIDER - user actually interact with it
+  detectSlide = (e)->
+    ga('send', 'e', {
+      eventCategory: 'slider',
+      eventAction: 'view',
+      eventLabel: $('.games-slider').find( 'li' ).attr('data-game')
+    })
+    console.log('slide changed')
 
     #     G A M E S     S L I D E R
 
@@ -18,5 +26,7 @@ $(document).ready ->
       $('.slide-description .inner-text').eq(current).addClass('visible')
   $('.slide-description .slider-prev').click ->
     games_slider.goToPrevSlide()
+    detectSlide()
   $('.slide-description .slider-next').click ->
     games_slider.goToNextSlide()
+    detectSlide()

@@ -1,6 +1,6 @@
 = render "banner"
 
-.row.section-indent.slide-up
+.row.section-indent.slide-up#aboutTechnology
   .columns
     p.section-title data-text=I18n.t("main.about_technology.data_text")
       = t("main.about_technology.title.text_1")
@@ -11,13 +11,13 @@
 .slider-wrap.slide-up
   .slide-img
     ul.games-slider
-      li
+      li data-game="game-1"
         .img-container style="background-image: url(#{asset_path('photo/slider-1.jpg')})"
-      li
+      li data-game="game-2"
         .img-container style="background-image: url(#{asset_path('photo/slider-2.jpg')})"
-      li
+      li data-game="game-3"
         .img-container style="background-image: url(#{asset_path('photo/slider-3.jpg')})"
-      li
+      li data-game="game-4"
         .img-container style="background-image: url(#{asset_path('photo/slider-4.jpg')})"
 
   .slide-description
