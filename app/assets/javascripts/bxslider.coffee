@@ -5,7 +5,7 @@ $(document).ready ->
     ga('send', 'e', {
       eventCategory: 'slider',
       eventAction: 'view',
-      eventLabel: $('.games-slider').find( 'li' ).attr('data-game')
+      eventLabel: 'slide changed'
     })
     console.log('slide changed')
 
