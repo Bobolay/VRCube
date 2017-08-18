@@ -20,7 +20,7 @@ ga( 'create', 'UA-104147567-1', 'auto' );
 
 // studio GA account ID (for development)
 // ga( 'create', 'UA-104756132-1', 'auto' );
-// ga( 'send', 'pageview' );
+ga( 'send', 'pageview' );
 
 
 // for localhost
