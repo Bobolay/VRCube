@@ -49,4 +49,4 @@ en:
         weekdays: "Weekdays"
         holidays: "Holidays"
         time_attr: "min"
-        money_attr: "usd"
+        money_attr: "uah"
