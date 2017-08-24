@@ -34,7 +34,14 @@ submit_form = (form, e)->
   setTimeout(
     ->
       $('button.reserve-btn, button.corner-btn').removeClass('success')
-      $(form).find('input').val('')
+      $("input").add($("textarea"))
+      $(form).find('input, textarea').filter(
+        ()->
+          return true if this.tagName.toLowerCase() == "textarea"
+          $input = $(this)
+          type = $input.attr("type")
+          type != "radio" && type != "checkbox"
+      ).val('')
     3000
   )
 
