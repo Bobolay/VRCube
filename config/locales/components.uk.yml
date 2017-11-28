@@ -16,7 +16,7 @@ uk:
       info: "Контактні дані"
       time: "Час бронювання"
       qnty: "Кількість гравців"
-      duration: "Тривалість суансу"
+      duration: "Тривалість сеансу"
     form_placeholders:
       address: "Адреса"
       name: "Ваше ім'я"
