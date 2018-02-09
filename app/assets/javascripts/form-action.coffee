@@ -65,23 +65,13 @@ $document.ready ->
       minlength: 3
     phone:
       required: true,
-      minlength: 10
   }
-
-  #computed_rules = get_hash_for(rules, ["call_request", "order"])
-  #console.log "computed_rules: ", computed_rules
-
 
   $("form.call-me-form, form.reservation-form").each(->
 
-
-
     $(this).validate({
       rules: rules
-
-
       submitHandler: submit_form
-
     })
   )
 
