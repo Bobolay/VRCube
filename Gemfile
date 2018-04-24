@@ -91,7 +91,7 @@ gem 'rack-page_caching'
 
 #gem 'attachable', github: "VoroninNick/attachable"
 
-gem 'cms', github: "pkorenev/cms"
+gem 'cms', github: "pkorenev/cms", ref: "c9bdaabe1a86ed785253a4c5ad265612392697f3"
 
 # gem 'require_reloader'
 
