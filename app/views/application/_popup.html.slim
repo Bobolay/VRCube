@@ -1,5 +1,5 @@
 .popup-wrap.reservation
-  
+
   .close-popup
     p = t("components.close_btn")
     = inline_svg "icons/close-icon.svg"
@@ -71,9 +71,9 @@
               span = inline_svg "icons/form-time.svg"
             .select-aligner
               select.nice-select name="duration"
-                option value="0.15min" selected="selected" data-display="15 ХВ"
+                /option value="0.15min" selected="selected" data-display="15 ХВ"
                   = t("components.time_options.value_1")
-                option value="30min"
+                option value="30min" selected="selected"
                   = t("components.time_options.value_2")
                 option value="1h"
                   = t("components.time_options.value_3")
