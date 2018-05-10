@@ -101,7 +101,7 @@ gem 'russian'
 gem 'globalize'
 gem 'rails_admin_globalize_field'
 
-gem 'pg'
+gem 'pg', '0.21.0'
 
 gem 'ace-rails-ap'
 
